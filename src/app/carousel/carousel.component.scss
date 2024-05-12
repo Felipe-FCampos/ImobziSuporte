@@ -1,0 +1,48 @@
+.container__carousel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.image_carousel img {
+    width: 100%;
+    height: auto;
+    transition: opacity 0.5s ease; /* Adiciona uma transição suave de opacidade */
+  }
+  
+.imagem_carousel.hidden {
+    opacity: 0;
+}
+
+.image_carousel {
+    position: relative;
+    display: inline-block;
+}
+
+.image_carousel button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.image_carousel button svg {
+    fill: white;
+}
+
+.nextBannerButton {
+    position: absolute;
+    top: 45%;
+    left: 87%;
+    transform: translate(-50%, -50%);
+    transform: rotate(90deg);
+}
+
+.prevBannerButton {
+    position: absolute;
+    top: 45%;
+    left: 2%;
+    transform: translate(-50%, -50%);
+    transform: rotate(-90deg);
+}
+  

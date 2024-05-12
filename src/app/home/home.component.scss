@@ -1,0 +1,148 @@
+._head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+._head img {
+    width: 29px;
+    height: 20px;
+    margin: 8px;
+}
+
+._head #list:hover {
+    cursor: pointer;
+}
+
+._head #logo_colorida {
+    width: 48px;
+    height: 49px;
+}
+
+#logo_colorida_desktop {
+    display: none;
+}
+
+._head #space {
+    padding: 24px;
+}
+
+._body {
+    display: flex;
+    flex-direction: column;
+    margin-top: 16px;
+}
+
+._body hr {
+    background-color: #0194A6;
+    width: 288px;
+    margin-top: 4px;
+    margin-bottom: 16px;
+}
+
+._body .title {
+    margin-left: -16px;
+}
+
+._body .title h1 {
+    font-family: 'Helvetica', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #0194A6;
+    margin-left: 32px;
+    margin-bottom: -8px;
+}
+
+._body .title h2 {
+    font-family: 'Helvetica', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #0194A6;
+    margin-left: 32px;
+}
+
+._body .title b {
+    font-weight: 700;
+    font-family: 'Helvetica', sans-serif;
+}
+
+._content_desktop {
+    display: none;
+}
+
+.subtitle {
+    display: flex;
+    justify-content: center;
+}
+
+.subtitle h1 {
+    font-family: 'Helvetica', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #0194A6;
+    margin-bottom: 16px;
+}
+
+.help_title {
+    display: flex;
+    justify-content: center;
+}
+
+.help_title h1 {
+    font-family: 'Helvetica', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #0194A6;
+    margin-bottom: 16px;
+}
+
+.image_home_screen {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 32px;
+    margin-inline: 0px;
+}
+
+.image_home_screen img {
+    width: 294px;
+    height: 156px;
+}
+
+.image_home_screen #_banner {
+    width: 450px;
+}
+
+.option {
+    display: flex;
+    justify-content: center;
+}
+
+#calcularIrrf {
+    width: 288px;
+    height: 51px;
+    border-radius: 8px;
+    border: none;
+    background-color: #0194A6;
+    color: #f3f3f3;
+    font-size: 18px;
+}
+
+#acessarFaq {
+    width: 288px;
+    height: 51px;
+    border-radius: 8px;
+    border: none;
+    background-color: #0194A6;
+    color: #f3f3f3;
+    font-size: 18px;
+}
+
+#acessarFaq a {
+    text-decoration: none;
+    color: #f3f3f3;
+}
+
+
+.navigation {
+    display: none;
+}

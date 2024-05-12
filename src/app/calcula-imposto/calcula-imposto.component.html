@@ -1,0 +1,73 @@
+<main>
+    <div class="menu">
+        <img id="list_branca" src="../../assets/list_branca.svg" alt="" (click)="openSideBar()">
+        <img id="logo_branca" src="../../assets/logoImobzi.svg" alt="">
+        <div id="space"></div>
+    </div>
+
+    <div class="title_back">
+        <img src="../../assets/back.svg" alt="" routerLink="/home">
+        <h1>Imposto de Renda Retido na Fonte</h1>
+        <div id="space"></div>
+    </div>
+
+    <section class="main_section">
+        <section class="rent_and_recipient">
+            <div class="rent_input">
+                <label id="valorAluguel" for="">Aluguel</label><br>
+                <input type="text" name="Aluguel" id="rent" placeholder="R$ 4500,00"><br>
+            </div>
+
+            <div class="recipient_input">
+                <label id="qtdRecipient" for="">Beneficiário(s)</label><br>
+                <input type="number" name="Beneficiario" id="recipient" placeholder="1"><br>
+            </div>
+        </section>
+
+        <section class="discounts">
+            <div class="simplifiedDiscount">
+                <span id="titleSimple">
+                    <p>Desconto Simplificado</p>
+                </span>
+                <span class="optionSimplifiedDiscount">
+                    <input type="radio" name="optionSimplifiedDiscount" id="yes" value="true">
+                    <label for="yes">Sim</label>
+                    <input type="radio" name="optionSimplifiedDiscount" id="no" value="false">
+                    <label for="no">Não</label>
+                </span>
+            </div>
+
+            <div class="admFee">
+                <span id="titleAdmFee">
+                    <p>Dedução da Taxa de<br>Administração</p>
+                </span>
+                <span id="titleAdmFeeDesktop">
+                    <p>Dedução da Taxa de Administração</p>
+                </span>
+                <span class="optionAdmFee">
+                    <input type="radio" name="optionAdmFee" id="yes" value="true" (click)="enableAdmFee()">
+                    <label for="">Sim</label>
+                    <input type="radio" name="optionAdmFee" id="no" value="false" (click)="disableAdmFee()">
+                    <label for="">Não</label><br>
+                </span>
+            </div>
+            
+            <div class="admFeeInput">
+                <label for="">Valor da Taxa de Administração</label>
+                <input type="text" name="Taxa de administração" id="admFee" placeholder="R$ 450,00" disabled>
+            </div>
+
+        </section>
+
+        <div class="button_calcular">
+            <button id="_calcular" (click)="calculaImposto()" type="submit">Calcular</button>
+            </div>
+        
+            <div class="result">
+                <h2>Resultado:</h2>
+                <div class="final_result">
+                    <h1>R$ <span id="result"></span></h1>
+                </div>
+            </div>
+    </section>
+</main>

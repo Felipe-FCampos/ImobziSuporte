@@ -1,0 +1,97 @@
+@media(min-width: 576px){
+
+    .main_section {
+        margin-top: 32px;
+        margin-left: 16rem;
+        margin-right: 16rem;
+    }
+
+    .main_section label {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 500;
+        font-size: 18px;
+        color: #0194A6;
+    }
+
+    .main_section input {
+        font-size: 16px;
+    }
+
+    input[type="radio"] {
+        display: inline;
+        -webkit-appearance: none; /* Remove o estilo padrão do sistema no Chrome/Safari */
+        appearance: none; /* Remove o estilo padrão do sistema em outros navegadores */
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        border: 2px solid #0092A5; 
+        margin-top: -5px;
+        margin-right: 8px;
+        padding-inline: 6px;
+        vertical-align: middle;
+      }
+    
+    input[type="radio"]:checked {
+        background-color: #0092A5;
+        font-size: 14px;
+    }
+    
+    .main_section #rent, #recipient {
+        width: 340px;
+        height: 42px;
+        border: none;
+        border-radius: 4px;
+        background-color: #EAEAEA;
+        margin-top: 4px;
+        padding-left: 16px;
+    }
+
+    .main_section #rent::placeholder, #recipient::placeholder, #admFee::placeholder {
+        opacity: 50%;
+    }
+
+    .simplifiedDiscount {
+        display: flex;
+        justify-content: space-between;
+        padding-inline: 16px;
+        font-size: 20px;
+    }
+
+    .admFee {
+        display: flex;
+        justify-content: space-between;
+        padding-inline: 16px;
+        font-size: 20px;
+    }
+
+    #titleAdmFeeDesktop {
+        display: flex;
+    }
+
+    #titleAdmFee {
+        display: none;
+    }
+
+    .button_calcular {
+        display: flex;
+        justify-content: center;
+        margin-top: 32px;
+    }
+    
+    #_calcular {
+        width: 212px;
+        height: 46px;
+        background-color: #0092A5;
+        border: none;
+        border-radius: 8px;
+        color: #EAEAEA;
+        font-size: 18px;
+        letter-spacing: 1px;
+    }
+
+    .button_calcular #_calcular:hover {
+        background-color: #1ab19a;
+        cursor: pointer;
+        transition: .2s;
+    }
+}

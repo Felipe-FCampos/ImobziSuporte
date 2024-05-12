@@ -1,0 +1,155 @@
+- - - - - - - - - - - - - - - - - - - - - Implementado - - - - - - - - - - - - - - - - - - - - - 
+
+
+<!-- div removida
+    <div class="inputName">
+    <span class="inputLogo">
+      <img id="login_logo" src="../assets/logoImobzi.svg" alt="">
+    </span>
+    <span class="inputText">
+      <input id="name" type="text" placeholder="Digite seu nome">
+      <button id="access" (click)="validateName()" >Acessar</button>
+    </span>
+  </div>
+-->
+
+
+ - - - - - - CSS Removido:
+
+// .inputName {
+//     display: none;
+// }
+
+// .inputLogo {
+//     display: flex;
+//     justify-content: center;
+//     margin-top: -93px;
+//     margin-bottom: 4rem;
+// }
+
+// .inputLogo img {
+//     width: 79px;
+//     height: 81px;
+// }
+
+// .inputText {
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+// }
+
+// .inputText input {
+//     width: 256px;
+//     height: 46px;
+//     border: none;
+//     border-radius: 8px;
+//     background-color: #f3f3f3;
+//     padding-block: 8px;
+//     padding-inline: 12px;
+//     margin-bottom: 16px;
+// }
+
+// .inputText input::placeholder {  
+//     color: #aaaaaa;
+//     font-family: 'Helvetica', sans-serif;
+// }
+
+// .inputText button {
+//     width: 112px;
+//     height: 36px;
+//     border: none;
+//     border-radius: 8px;
+//     font-family: 'Helvetica', sans-serif;
+//     color: #0194A6;
+// }
+
+@keyframes logo {
+    0% {
+        transform: translateY(50px);
+        }
+    35% {
+        transform: translateY(-150px);
+        }
+    50% {
+        transform: translateY(50px);
+        }
+    65% {
+        transform: rotate(-360deg);
+        }
+    100%{transform: rotate(0deg);}
+}
+
+#logo {
+    animation: logo 1s ease-in-out;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+- - - - - - - - - - typescript removido:
+
+onReady = (callback: () => void) => {
+    let intervalId = window.setInterval(() => {
+      if ((document.getElementsByTagName('main')[0] !== undefined)) {
+        window.clearInterval(intervalId);
+        callback.call(this);
+      }
+    }, 1050);
+  };
+
+  setVisible(selector: string, visible: boolean) {
+    const element = document.querySelector(selector) as HTMLElement;
+
+    if (element) {
+      element.style.display = visible ? 'block' : 'none';
+    }
+  };
+
+  start = (() => {
+    this.setVisible('.inputName', true);
+    this.setVisible('#login_logo', true);
+    this.setVisible('#loading_screen', false);
+  });
+
+  constructor(private router: Router) {
+    this.onReady(this.start.bind(this));
+  }
+
+  navigatePage(): void{
+    this.router.navigate(['/home']);
+  }
+
+
+  validateName() {
+    let userNameInput = document.getElementById('name') as HTMLInputElement;
+    let userConfirmed: boolean;
+
+    if (userNameInput.value) {
+      userConfirmed = true;
+    } else {
+      userConfirmed = false;
+    }
+
+    if (userConfirmed == true) {
+      let userName = userNameInput.value;
+
+      this.router.navigate(['/home']);
+
+      let element = document.getElementById('main') as HTMLElement;
+      element.style.display = 'none';
+      
+
+
+    } else {
+      userNameInput.style.border = '2px solid #ff5050';
+      userNameInput.placeholder = 'Nome inválido';
+    }
+  }
+  
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 

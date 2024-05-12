@@ -1,0 +1,87 @@
+.inputName {
+    display: none;
+}
+
+#loading_screen #loading_screen_logo_desktop {
+    display: none;
+}
+
+.inputLogoDesktop {
+    display: none;
+}
+
+.inputLogo {
+    display: flex;
+    justify-content: center;
+    margin-top: -93px;
+    margin-bottom: 4rem;
+}
+
+.inputLogo img {
+    width: 79px;
+    height: 81px;
+}
+
+.inputText {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.inputText input {
+    width: 256px;
+    height: 46px;
+    border: none;
+    border-radius: 8px;
+    background-color: #f3f3f3;
+    padding-block: 8px;
+    padding-inline: 12px;
+    margin-bottom: 16px;
+}
+
+.inputText input::placeholder {  
+    color: #aaaaaa;
+    font-family: 'Helvetica', sans-serif;
+}
+
+.inputText button {
+    width: 112px;
+    height: 36px;
+    border: none;
+    border-radius: 8px;
+    font-family: 'Helvetica', sans-serif;
+    color: #0194A6;
+}
+
+@keyframes logo {
+    0% {
+        transform: translateY(50px);
+        }
+    35% {
+        transform: translateY(-150px);
+        }
+    50% {
+        transform: translateY(50px);
+        }
+    65% {
+        transform: rotate(-360deg);
+        }
+    100%{transform: rotate(0deg);}
+}
+
+#logo {
+    animation: logo 1s ease-in-out;
+}
+
+main {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #0092A5; /* Cor de fundo opcional */
+        /* Outros estilos conforme necessário */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+}

@@ -1,0 +1,192 @@
+.menu {
+    background-color: #0092A5;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: -8px;
+    padding-block: 4px;
+    padding-left: 16px;
+}
+
+.menu #space {
+    padding: 24px;
+}
+
+.menu #logo_branca {
+    width: 27px;
+    height: 28px;
+}
+
+.menu #list_branca:hover {
+    cursor: pointer;
+}
+
+.title_back {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 32px;
+    margin-left: 16px;
+}
+
+.title_back h1 {
+    font-family: 'Helvetica', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #0194A6;
+}
+
+.title_back #space {
+    padding: 16px;
+}
+
+.title_back img:hover {
+    cursor: pointer;
+}
+
+.main_section {
+    margin-top: 32px;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+.main_section label {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    color: #0194A6;
+}
+
+.main_section #rent, #recipient {
+    width: 112px;
+    height: 42px;
+    border: none;
+    border-radius: 4px;
+    background-color: #EAEAEA;
+    margin-top: 4px;
+    padding-left: 16px;
+}
+
+.main_section .rent_and_recipient {
+    display: flex;
+    justify-content: space-between;
+}
+
+input[type="radio"] {
+    display: inline;
+    -webkit-appearance: none; /* Remove o estilo padrão do sistema no Chrome/Safari */
+    appearance: none; /* Remove o estilo padrão do sistema em outros navegadores */
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 2px solid #0092A5; 
+    margin-top: -5px;
+    margin-right: 8px;
+    vertical-align: middle;
+  }
+
+input[type="radio"]:checked {
+    background-color: #0092A5;
+    font-size: 14px;
+}
+
+input[type="radio"]:checked {
+    background-color: #0092A5; 
+    font-size: 14px;
+}
+
+.simplifiedDiscount {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #EAEAEA;
+    font-family: 'Roboto', sans-serif;
+    color: #0092A5;
+    font-size: 16px;
+    border-radius: 4px;
+}
+
+.admFee {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #EAEAEA;
+    font-family: 'Roboto', sans-serif;
+    color: #0092A5;
+    font-size: 16px;
+    border-radius: 4px;
+    margin-top: 16px;
+}
+
+.admFeeInput {
+    display: flex;
+    flex-direction: column;
+    margin-top: 16px;
+}
+
+.admFeeInput #admFee {
+    height: 42px;
+    border: none;
+    border-radius: 4px;
+    background-color: #EAEAEA;
+    padding-left: 16px;
+}
+
+.admFeeInput label {
+    margin-bottom: 4px;
+}
+
+.discounts {
+    display: flex;
+    flex-direction: column;
+    margin-top: 16px;
+}
+
+.button_calcular {
+    display: flex;
+    justify-content: center;
+    margin-top: 32px;
+}
+
+#_calcular {
+    width: 112px;
+    height: 36px;
+    background-color: #0092A5;
+    border: none;
+    border-radius: 8px;
+    color: #EAEAEA;
+}
+
+.result {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.result h2 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    color: #0092A5;
+}
+
+.result h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    color: #0092A5;
+}
+
+.result .final_result {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    background-color: #EAEAEA;
+    width: 100%;
+    height: 58px;
+}
+
+#titleAdmFeeDesktop {
+    display: none;
+}

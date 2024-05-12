@@ -1,0 +1,214 @@
+@media(min-width: 576px) {
+
+    ._head {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    ._head img {
+        width: 34px;
+        height: 25px;
+        margin: 8px;
+    }
+
+    ._content {
+        display: none;
+    } 
+
+    ._content_desktop {
+        display: block;
+    }
+
+    .calculator {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .calculatorOptions {
+        display: flex;
+        margin-top: 16px;
+        margin-left: 3.3%;
+    }
+
+    .calculatorOptions button {
+        font-family: 'Roboto', sans-serif;
+        margin-right: 16px;
+        font-weight: 300;
+    }
+    
+    .irrfButton {
+        background-image: url(../../assets/background_irrf.svg);
+        background-size: cover;
+        width: 292px;
+        height: 128px;
+        border: none;
+        font-size: 28px;
+        color: #eaeaea;
+        letter-spacing: 1px;
+        border-radius: 8px;
+        transition: .7s;
+    }
+    
+    .irrfButton:hover {
+        background-image: url('../../assets/background_irrf_hover.svg');
+        color: #015965;
+        transition: .7s;
+        cursor: pointer
+    }
+
+    .multaButton {
+        background-image: url(../../assets/backgoround_multas.svg);
+        background-size: cover;
+        width: 292px;
+        height: 128px;
+        border: none;
+        font-size: 28px;
+        color: #eaeaea;
+        letter-spacing: 1px;
+        transition: .7s;
+    }
+
+    .multaButton:hover {
+        background-image: url('../../assets/background_multas_hover.svg');
+        color: #015965;
+        transition: .7s;
+        cursor: pointer
+    }
+
+    .propButton {
+        background-image: url(../../assets/background_dias.svg);
+        background-size: cover;
+        width: 292px;
+        height: 128px;
+        border: none;
+        font-size: 28px;
+        color: #eaeaea;
+        letter-spacing: 1px;
+        transition: .7s;
+    }
+
+    .propButton:hover {
+        background-image: url('../../assets/background_dias_hover.svg');
+        color: #015965;
+        transition: .7s;
+        cursor: pointer;
+    }
+
+    #list {
+        display: none;
+    }
+
+    .navigation {
+        display: flex;
+        padding: 0px;
+        font-family: 'Roboto', sans-serif;
+        font-size: 20px;
+    }
+
+    .navigation nav {
+        display: flex;
+        list-style-type: none;
+    }
+
+    .navigation a {
+        margin-inline: 16px;
+        padding-inline: 16px;
+        padding-block: 8px;
+    }
+
+    #menuLink {
+        position: relative;
+        color: #0092A5;
+        /* Cor do texto */
+        text-decoration: none;
+        /* Remover o sublinhado padrão do link */
+    }
+
+    #menuLink::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 0;
+        height: 2px;
+        background-color: #0092A5;
+        /* Cor da linha */
+        transition: width 0.3s ease;
+        /* Transição suave da largura */
+    }
+
+    #menuLink:hover::before {
+        width: 100%;
+        /* Largura da linha ao passar o mouse */
+    }
+
+    #space {
+        display: none;
+    }
+
+    ._body .title {
+        margin-left: 16px;
+    }
+
+    ._body .title h1 {
+        font-size: 20px;
+    }
+    
+    ._body .title h2 {
+        font-size: 20px;
+    }
+
+    ._body hr {
+        width: 84rem;
+        height: 1px;
+        display: flex;
+        justify-content: center;
+        background-color: #0092A5;
+        border-radius: 50%;
+    }
+
+    .image_home_screen {
+        display: flex;
+        margin: 0px;
+    }
+
+    .image_home_screen img {
+        width: 394px;
+        height: 256px;
+    }
+
+    .subtitle h1 {
+        font-size: 24px;
+    }
+
+    .help_title h1 {
+        font-size: 24px;
+    }
+
+    #calcularIrrf {
+        width: 24rem;
+        height: 51px;
+        border-radius: 8px;
+        border: none;
+        background-color: #0194A6;
+        color: #f3f3f3;
+        letter-spacing: 2px;
+    }
+
+    #acessarFaq {
+        width: 24rem;
+        height: 51px;
+        border-radius: 8px;
+        border: none;
+        background-color: #0194A6;
+        color: #f3f3f3;
+    }
+
+    #calcularIrrf:hover,
+    #acessarFaq:hover {
+        cursor: pointer;
+        background-color: #1ab19a;
+        transition: .2s;
+    }
+}

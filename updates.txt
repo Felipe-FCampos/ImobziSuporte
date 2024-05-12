@@ -1,0 +1,125 @@
+---Current Version v1.11.1
+
+Added:
+- New desktop layout
+
+Bugs fixed:
+- When you calculate an IRRF value and this value was bigger than R$ 2.259,21 and minor than R$ 2.826,65, the calculator 
+doesn't deduct the deduction value from the final value. 
+
+---Last Version v1.10.0
+
+Added:
+- Navigation bar
+
+Bugs fixed:
+- None
+
+---Version v1.9.1
+
+Added:
+- Navigation Sidebar
+
+Bugs fixed:
+- Navigation bugs
+
+
+---Version v1.8.0
+
+Added:
+- None
+
+Bugs fixed:
+- None
+
+
+---Version v1.8.1
+
+Added:
+- None
+
+Bugs fixed:
+- Padding on Radio buttons 
+
+
+---Version v1.8.0
+
+Added:
+- Desktop calculator
+
+Bugs fixed:
+- None
+
+
+---Version v1.7.1
+
+Added:
+- None
+
+Bugs fixed:
+- Page reloading to the last component acced
+
+
+---Version v1.7.1
+
+Added:
+- None
+
+Bugs fixed:
+- Responsiveness mobile
+
+
+---Version v1.7.1
+
+Added:
+- None
+
+Bugs fixed:
+- Static username
+
+
+---Version v1.7.0
+
+Added:
+- Desktop homepage
+
+Bug fixed:
+- None
+
+
+---Version v1.6.0
+
+Added:
+- Background Loading screen changed to white on desktop
+- Logo loading screen changed to colored on desktop
+
+Bugs fixed:
+- None
+
+
+---Version v1.4.0
+
+Added:
+- Background color changed to white
+- White logo changed to colored logo
+- Hover on acess button
+
+Bugs fixed:
+- None
+
+
+---Version v1.1.1
+
+Added items:
+- Added login desktop version.
+
+Bugs fixed:
+- Radio options in the IRRF page.
+
+
+---Version v1.0.0
+
+First version mobile released to use.
+
+
+---Last Version v1.0.0
