@@ -12,7 +12,6 @@ import { HistoryComponent } from './history/history.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { CarouselComponent } from './carousel/carousel.component';
 import { CommonModule } from '@angular/common';
-import { SlickCarouselModule } from 'ngx-slick-carousel';
 
 @NgModule({
   declarations: [
@@ -28,8 +27,7 @@ import { SlickCarouselModule } from 'ngx-slick-carousel';
     BrowserModule,
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
-    CommonModule, 
-    SlickCarouselModule
+    CommonModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
