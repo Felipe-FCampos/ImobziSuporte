@@ -1,6 +1,10 @@
-# ImobziCalculadora
+# ImobziSuporte
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.4.
+
+## Development Reason
+
+Made to Imobzi Support team to help with all the cases and to organize their job.
 
 ## Development server
 
