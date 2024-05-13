@@ -37,5 +37,8 @@ export class HomeComponent {
     this.sidebarService.toggleSideBar(this.viewContainerRef);
   }
 
+  waitForUpdate(){
+    alert('Em breve mais atualizações!');
+  }
   
 }

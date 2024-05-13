@@ -1,4 +1,14 @@
----Current Version v1.11.2
+---Current Version v1.11.3
+
+Added:
+- None
+
+Bugs fixed:
+- Buttons ticket and days were returning nothing, now they return an alert saying "wait for updates".
+
+Note: those updates (buttons ticket and days) will be made in the future.
+
+---Last Version v1.11.2
 
 Added:
 - None
@@ -6,7 +16,7 @@ Added:
 Bugs fixed:
 - Router IRRF button
 
----Last Version v1.11.1
+---Version v1.11.1
 
 Added:
 - New desktop layout

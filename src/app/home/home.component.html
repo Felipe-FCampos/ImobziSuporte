@@ -49,8 +49,8 @@
                 </div>
                 <div class="calculatorOptions">
                     <button class="irrfButton" routerLink="/irrf">IRRF</button>
-                    <button class="multaButton">Multas & Juros</button>
-                    <button class="propButton">Dias proporcionais</button>
+                    <button class="multaButton" (click)="waitForUpdate()">Multas & Juros</button>
+                    <button class="propButton" (click)="waitForUpdate()">Dias proporcionais</button>
                 </div>
             </div>
         </section>
