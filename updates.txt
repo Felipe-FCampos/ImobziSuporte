@@ -1,4 +1,12 @@
----Current Version v1.11.1
+---Current Version v1.11.2
+
+Added:
+- None
+
+Bugs fixed:
+- Router IRRF button
+
+---Last Version v1.11.1
 
 Added:
 - New desktop layout
@@ -7,7 +15,7 @@ Bugs fixed:
 - When you calculate an IRRF value and this value was bigger than R$ 2.259,21 and minor than R$ 2.826,65, the calculator 
 doesn't deduct the deduction value from the final value. 
 
----Last Version v1.10.0
+---Version v1.10.0
 
 Added:
 - Navigation bar

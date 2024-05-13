@@ -28,7 +28,16 @@
     .calculatorOptions {
         display: flex;
         margin-top: 16px;
-        margin-left: 3.3%;
+        margin-left: 4%;
+    }
+
+    .calculator .title_desktop h1 {
+        margin-left: 4%;
+        font-family: 'Helvetica', sans-serif;
+        font-weight: 500;
+        font-size: 16px;
+        color: #0194A6;
+        margin-bottom: -8px;
     }
 
     .calculatorOptions button {
@@ -145,10 +154,6 @@
 
     #space {
         display: none;
-    }
-
-    ._body .title {
-        margin-left: 16px;
     }
 
     ._body .title h1 {

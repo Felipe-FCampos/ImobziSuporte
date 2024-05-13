@@ -4,6 +4,7 @@ import { AppComponent } from './app.component';
 import { CalculaImpostoComponent } from './calcula-imposto/calcula-imposto.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
+import { HistoryComponent } from './history/history.component';
 
 const routes: Routes = [
 
@@ -17,7 +18,11 @@ const routes: Routes = [
   },
   {
     path:'irrf',
-    component: CalculaImpostoComponent
+    component: CalculaImpostoComponent,
+  },
+  {
+    path:'history',
+    component: HistoryComponent,
   }
 ];
 
