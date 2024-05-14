@@ -5,14 +5,21 @@
         <div id="space"></div>
     </div>
 
-    <section>
-        <div *ngFor="let item of historico">
-            <h1>{{ item | number: '.2' }}</h1>
+    <div class="title_back">
+        <img src="../../assets/back.svg" alt="" routerLink="/home">
+        <h1>Histórico</h1>
+        <div id="space"></div>
+    </div>
+
+    <section class="history_container">
+        <div class="lastNumber">
+            <h1>{{ valorFinal | number: '.2' }}</h1>
         </div>
 
-        <h1>{{ historico }}</h1>
+        <div *ngFor="let item of reverseHistory()">
+            <h2>{{ item | number: '.2' }}</h2>
+            <hr>
+        </div>
 
-        <hr>
-       
     </section>
 </main>

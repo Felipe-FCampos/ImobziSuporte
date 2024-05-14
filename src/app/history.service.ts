@@ -4,23 +4,35 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class HistoryService {
-
+  
   historico: number[] = [];
+  lastValue!: number;
 
   constructor() { }
 
+  saveLastNumber(lastNumber: number){
+    localStorage.setItem('lastNumber', lastNumber.toString());
+  }
+
+  getLastNumber(): number {
+    let value = localStorage.getItem('lastNumber');
+    this.lastValue = parseFloat(value || '');
+    return this.lastValue;
+  }
+
   addHistory(value: number){
-    this.historico.push(value);
+    this.historico[this.historico.length] = value;
     this.saveHistory(this.historico);
-    console.log('funcionou! Valor:' + value);
   }
 
   saveHistory(historico: number[]){
-    localStorage.setItem('historico', JSON.stringify(this.historico));
+    localStorage.setItem('historico', JSON.stringify(historico));
   }
 
   getHistory(): number[] {
-    return this.historico.slice();
+    let novoHistorico = localStorage.getItem('historico');    
+    this.historico = JSON.parse(novoHistorico || '[]');
+    return this.historico;
   }
 
   saveCalculatorInfo(valorFinal: number){

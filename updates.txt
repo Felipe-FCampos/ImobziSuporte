@@ -1,4 +1,12 @@
----Current Version v1.11.3
+---Current Version v1.11.4
+
+Added:
+- None
+
+Bugs fixed:
+- Radio buttons
+
+---Last Version v1.11.3
 
 Added:
 - None
@@ -8,7 +16,7 @@ Bugs fixed:
 
 Note: those updates (buttons ticket and days) will be made in the future.
 
----Last Version v1.11.2
+---Version v1.11.2
 
 Added:
 - None

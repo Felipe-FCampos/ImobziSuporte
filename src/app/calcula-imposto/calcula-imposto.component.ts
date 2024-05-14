@@ -149,7 +149,8 @@ export class CalculaImpostoComponent {
       let finalRent = valorAluguel;
       let valorFinal = this.calculaDeducao(valorAluguel);
 
-      this.saveCalculatorValue(valorFinal)
+      this.saveCalculatorValue(valorFinal);
+      this.getLastNumber(valorFinal);
 
         // Finaliza o código exibindo o valor do IRRF
 
@@ -183,6 +184,7 @@ export class CalculaImpostoComponent {
       }
     } else {
       console.log("Invalid value!");
+      alert("É necessário preencher todos os campos!");
     }
   }
 
@@ -199,4 +201,7 @@ export class CalculaImpostoComponent {
     this.historyService.addHistory(valorFinal);
   }
 
+  getLastNumber(lastNumber: number){
+    this.historyService.saveLastNumber(lastNumber);
+  }
 }

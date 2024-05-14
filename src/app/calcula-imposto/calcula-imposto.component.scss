@@ -73,27 +73,8 @@
 }
 
 input[type="radio"] {
-    display: inline;
-    -webkit-appearance: none; /* Remove o estilo padrão do sistema no Chrome/Safari */
-    appearance: none; /* Remove o estilo padrão do sistema em outros navegadores */
-    width: 16px;
-    height: 16px;
-    border-radius: 50%;
-    border: 2px solid #0092A5; 
-    margin-top: -5px;
-    margin-right: 8px;
-    vertical-align: middle;
+    display: none;
   }
-
-input[type="radio"]:checked {
-    background-color: #0092A5;
-    font-size: 14px;
-}
-
-input[type="radio"]:checked {
-    background-color: #0092A5; 
-    font-size: 14px;
-}
 
 .simplifiedDiscount {
     display: flex;

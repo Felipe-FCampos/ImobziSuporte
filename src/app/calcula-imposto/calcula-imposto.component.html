@@ -29,12 +29,16 @@
                 <span id="titleSimple">
                     <p>Desconto Simplificado</p>
                 </span>
-                <span class="optionSimplifiedDiscount">
-                    <input type="radio" name="optionSimplifiedDiscount" id="yes" value="true">
-                    <label for="yes">Sim</label>
-                    <input type="radio" name="optionSimplifiedDiscount" id="no" value="false">
-                    <label for="no">Não</label>
-                </span>
+                <div class="optionSimplifiedDiscount">
+                    <label for="yes">
+                        <input type="radio" name="optionSimplifiedDiscount" id="yes" value="true">
+                        <div class="spanForRadio"><span class="custom_radio"></span>Sim</div>
+                    </label>
+                    <label for="no">
+                        <input type="radio" name="optionSimplifiedDiscount" id="no" value="false">
+                        <div class="spanForRadio"><span class="custom_radio"></span>Não</div>
+                    </label>
+                </div>
             </div>
 
             <div class="admFee">
@@ -44,14 +48,21 @@
                 <span id="titleAdmFeeDesktop">
                     <p>Dedução da Taxa de Administração</p>
                 </span>
-                <span class="optionAdmFee">
-                    <input type="radio" name="optionAdmFee" id="yes" value="true" (click)="enableAdmFee()">
-                    <label for="">Sim</label>
-                    <input type="radio" name="optionAdmFee" id="no" value="false" (click)="disableAdmFee()">
-                    <label for="">Não</label><br>
-                </span>
+
+                <div class="optionAdmFee">
+                    <label for="yesAdm">
+                        <input type="radio" name="optionAdmFee" id="yesAdm" value="true" (click)="enableAdmFee()">
+                        <div class="spanForRadio"><span class="custom_radio"></span>Sim</div>
+                    </label>
+                    <label for="noAdm">
+                        <input type="radio" name="optionAdmFee" id="noAdm" value="false" (click)="disableAdmFee()">
+                        <div class="spanForRadio"><span class="custom_radio"></span>Não</div>
+                    </label>
+                </div>
+                
+
             </div>
-            
+
             <div class="admFeeInput">
                 <label for="">Valor da Taxa de Administração</label>
                 <input type="text" name="Taxa de administração" id="admFee" placeholder="R$ 450,00" disabled>
@@ -61,13 +72,13 @@
 
         <div class="button_calcular">
             <button id="_calcular" (click)="calculaImposto()" type="submit">Calcular</button>
+        </div>
+
+        <div class="result">
+            <h2>Resultado:</h2>
+            <div class="final_result">
+                <h1>R$ <span id="result"></span></h1>
             </div>
-        
-            <div class="result">
-                <h2>Resultado:</h2>
-                <div class="final_result">
-                    <h1>R$ <span id="result"></span></h1>
-                </div>
-            </div>
+        </div>
     </section>
 </main>

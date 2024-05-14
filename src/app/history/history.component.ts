@@ -18,6 +18,11 @@ export class HistoryComponent implements OnInit {
 
   ngOnInit(){
     this.historico = this.historyService.getHistory();
+    this.valorFinal = this.historyService.getLastNumber();
+  }
+
+  reverseHistory(){
+    return this.historico.slice().reverse();
   }
 
   openSideBar(){
