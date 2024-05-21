@@ -23,7 +23,7 @@ export class HistoryComponent implements OnInit, AfterViewInit {
   simplifiedDiscountHistory: string[] = [];
   admFeeDeductHistory: string[] = [];
   admFeeHistory: number[] = [];
-  admFee!: number;
+  admFeeTax!: number;
 
   isMarked = false;
 
@@ -45,7 +45,7 @@ export class HistoryComponent implements OnInit, AfterViewInit {
     this.admFeeHistory = this.historyService.getAdmFee();
     this.changeHistory();
     this.initializeSelectedItems();
-    console.log(localStorage.getItem('verify') + " aaa");
+    console.log(this.admFeeHistory);
   }
 
   selecionado(index: number): void {
@@ -87,8 +87,15 @@ export class HistoryComponent implements OnInit, AfterViewInit {
   reverseHistory(){
     const combinedHistory = [];
     for(let i = 0; i < this.historico.length; i++){
-      combinedHistory.push({  value: this.historico[i], simpleDiscount: this.simplifiedDiscountHistory[i], admFeeDeduct: this.admFeeDeductHistory[i], admFee: this.admFeeHistory[i] })
+      combinedHistory.push({  
+        value: this.historico[i],
+        simpleDiscount: this.simplifiedDiscountHistory[i],
+        admFeeDeduct: this.admFeeDeductHistory[i], 
+        admFee: this.admFeeHistory[i] 
+      });
     }
+    console.log('Combined History:', combinedHistory);
+
     return combinedHistory.slice().reverse();
   }
 

@@ -75,7 +75,7 @@
             <img src="../../assets/arrow.svg" alt="">
             <h1>Desconto simplificado: {{ simplifiedDiscountHistory[simplifiedDiscountHistory.length - 1] }}</h1>
             <h1>Dedução da taxa de administração: {{ admFeeDeductHistory[admFeeDeductHistory.length - 1] }}</h1>
-            <h1>Valor da taxa: {{ admFeeHistory[admFeeHistory.length - 1] }}</h1>
+            <h1>Valor da taxa: {{ admFeeHistory[admFeeHistory.length - 1] ? (admFeeHistory[admFeeHistory.length - 1] | number: '.2') : '0,00' }}</h1>
         </div>
 
         <hr>
@@ -91,7 +91,7 @@
             <img src="../../assets/arrow.svg" alt="">
             <h2>Desconto simplificado: {{ item.simpleDiscount }}</h2>
             <h2>Dedução da taxa de administração: {{ item.admFeeDeduct }}</h2>
-            <h2>Valor da taxa: {{ item.admFee }}</h2>
+            <h2>Valor da taxa: {{ item.admFee ? (item.admFee | number: '.2') : '0.00' }}</h2>
         </div>
     </section>
 </main>
