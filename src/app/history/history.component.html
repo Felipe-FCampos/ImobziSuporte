@@ -24,8 +24,8 @@
         <p>Após a exclusão, não será possível sua recuperação.</p>
         <p>Deseja prosseguir com a exclusão dos itens selecionados?</p>
         <div class="delete_buttons">
-            <button>Sim</button>
-            <button>Não</button>
+            <button (click)="deleteHistory()">Sim</button>
+            <button (click)="closeConfirmDelete()">Não</button>
         </div>
     </div>
 
@@ -33,22 +33,22 @@
         <h1>Tem certeza?</h1>
         <p>Esse procedimento irá apagar todo o historico e sua recuperação não será possível, deseja prosseguir?</p>
         <div class="delete_buttons">
-            <button>Sim</button>
-            <button>Não</button>
+            <button (click)="deleteHistory()">Sim</button>
+            <button (click)="closeConfirmDelete()">Não</button>
         </div>
     </div>
 
     <div class="title_back">
         <img src="../../assets/back.svg" alt="" routerLink="/home">
         <h1>Seu histórico</h1>
-        <div class="trashCan"><img src="../../assets/trash.svg" alt="" (click)="deleteHistory()"></div>
+        <div class="trashCan"><img src="../../assets/trash.svg" alt="" (click)="confirmDelete()"></div>
     </div>
 
     <div class="title_history">
         <h1>Seu histórico</h1>
         <div class="buttons">
             <button id="novoCalculo" routerLink="/irrf">Fazer novo cálculo</button>
-            <div class="trashCan"><img src="../../assets/trash.svg" alt="" (click)="deleteHistory()"></div>
+            <div class="trashCan"><img src="../../assets/trash.svg" alt="" (click)="confirmDelete()"></div>
         </div>
     </div>
 

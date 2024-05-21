@@ -164,9 +164,26 @@ export class HistoryComponent implements OnInit, AfterViewInit {
 
   deleteHistory(){
     this.excluirItems();
-    console.log(localStorage.getItem('verify'))
+    console.log(localStorage.getItem('verify'));
     // this.deleteLastNumber();
 
     location.reload();
   }
+
+  confirmDelete(){
+    let element = document.querySelector('.popup_delete_history') as HTMLElement;
+    element.style.display = 'flex';
+
+    let element_back = document.querySelector('.background') as HTMLElement;
+    element_back.style.display = 'flex';
+  }
+
+  closeConfirmDelete(){
+    let element = document.querySelector('.popup_delete_history') as HTMLElement;
+    element.style.display = 'none';
+
+    let element_back = document.querySelector('.background') as HTMLElement;
+    element_back.style.display = 'none';
+  }
+
 }

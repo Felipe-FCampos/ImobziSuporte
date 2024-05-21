@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AngularFireModule } from '@angular/fire/compat';
-//import { FormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -14,6 +14,7 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { CarouselComponent } from './carousel/carousel.component';
 import { CommonModule } from '@angular/common';
 import { DecimalPipe } from '@angular/common';
+import { MultasejurosComponent } from './multasejuros/multasejuros.component';
 
 @NgModule({
   declarations: [
@@ -23,14 +24,15 @@ import { DecimalPipe } from '@angular/common';
     UserComponent,
     HistoryComponent,
     SidebarComponent,
-    CarouselComponent
+    CarouselComponent,
+    MultasejurosComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
     CommonModule,
-//    FormsModule
+   FormsModule
   ],
   providers: [DecimalPipe],
   bootstrap: [AppComponent]
