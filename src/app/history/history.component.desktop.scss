@@ -1,0 +1,152 @@
+@media(min-width: 576px) {
+    ._head {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: white;
+        //box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        //box-shadow: 0 4px 4px -2px rgba(0, 0, 0, 0.1); /* Direciona a sombra para baixo */
+    }
+
+    hr {
+        background-color: #0092A5;
+        height: 1px;
+        color: #0092A5;
+        border: none;
+        opacity: 50%;
+    }
+
+    #list {
+        display: none;
+    }
+
+    #space {
+        display: none;
+    }
+
+    .navigation {
+        display: flex;
+        padding: 0px;
+        font-family: 'Roboto', sans-serif;
+        font-size: 20px;
+    }
+
+    .navigation nav {
+        display: flex;
+        list-style-type: none;
+    }
+
+    .navigation a {
+        margin-inline: 16px;
+        padding-inline: 16px;
+        padding-block: 8px;
+    }
+
+    #menuLink {
+        position: relative;
+        color: #0092A5;
+        /* Cor do texto */
+        text-decoration: none;
+        /* Remover o sublinhado padrão do link */
+    }
+
+    #menuLink::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 0;
+        height: 2px;
+        background-color: #0092A5;
+        /* Cor da linha */
+        transition: width 0.3s ease;
+        /* Transição suave da largura */
+    }
+
+    #menuLink:hover::before {
+        width: 100%;
+        /* Largura da linha ao passar o mouse */
+    }
+
+    .menu {
+        display: none;
+    }
+
+    #spaceTitle {
+        width: 32px;
+        height: 32px;
+        background-color: red;
+    }
+
+    .title_back {
+        display: none;
+    }
+
+    .title_history {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 32px;
+        margin-left: 16px;
+    }
+
+    .title_history .trashCan img {
+        width: 36px;
+        height: 36px;
+        margin-left: 32px;
+    }
+
+    .title_history .trashCan img:hover {
+        cursor: pointer;
+    }
+
+    .title_history {
+        margin-right: 32px;
+    }
+    
+    .title_history h1 {
+        font-family: 'Helvetica', sans-serif;
+        font-weight: 500;
+        font-size: 28px;
+        color: #0194A6;
+    }
+
+    .title_history .buttons {
+        display: flex;
+        align-items: center;
+    }
+
+    #novoCalculo {
+        width: 156px;
+        height: 40px;
+        background-color: #0092A5;
+        font-size: 16px;
+        border: none;
+        border-radius: 8px;
+        color: #EAEAEA;
+        transition: .5s;
+    }
+
+    #novoCalculo:hover {
+        cursor: pointer;
+        background-color: #02DEDA;
+        color: #015965;
+        transition: .5s;
+    }
+
+    .lastNumber img {
+        display: none;
+    }
+
+    .pastHistory img {
+        display: none;
+    }
+
+    .lastNumber h1 {
+        display: flex;
+    }
+
+    .pastHistory h2 {
+        display: flex;
+    }
+}

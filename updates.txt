@@ -1,4 +1,13 @@
----Current Version v1.11.4
+---Current Version v1.12.2
+
+Added: 
+- History page
+- Deleting items from history page
+
+Bugs fixed:
+- Input selecteds
+
+---Last Version v1.11.4
 
 Added:
 - None
@@ -6,7 +15,7 @@ Added:
 Bugs fixed:
 - Radio buttons
 
----Last Version v1.11.3
+---Version v1.11.3
 
 Added:
 - None

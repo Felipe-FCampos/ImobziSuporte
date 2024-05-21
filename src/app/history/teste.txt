@@ -48,9 +48,14 @@ export class HistoryComponent implements OnInit, AfterViewInit {
     console.log(localStorage.getItem('verify') + " aaa");
   }
 
-  selecionado(index: number): void {
-    this.selectedItems[index] = !this.selectedItems[index];
-    console.log(this.selectedItems[index])
+  checkboxChanged(): void {
+    this.checkboxes.forEach((checkbox, index) => {
+      if (this.selectedItems[index]) {
+        console.log(`Checkbox ${index} está marcado.`);
+      } else {
+        console.log(`Checkbox ${index} está desmarcado.`);
+      }
+    });
   }
 
   lastNumberSelected(){
@@ -65,9 +70,12 @@ export class HistoryComponent implements OnInit, AfterViewInit {
       this.verifying = !this.verifying;
       localStorage.setItem('verify', JSON.stringify(this.verifying));
 
-      console.log(localStorage.getItem('verify') + ' deleteLastNumber')
-
     }
+  }
+
+  selecionado(index: number): void {
+    this.selectedItems[index] = !this.selectedItems[index];
+    console.log(this.selectedItems[index])
   }
 
   excluirItems(){
@@ -79,9 +87,7 @@ export class HistoryComponent implements OnInit, AfterViewInit {
 
     this.deleteLastNumber();
     
-    console.log(localStorage.getItem('verify') + 'excluirItens')
-
-    // location.reload();
+    location.reload();
   }
 
   reverseHistory(){
@@ -103,12 +109,18 @@ export class HistoryComponent implements OnInit, AfterViewInit {
     if(verify == true){
       let element = document.querySelector(".lastNumber") as HTMLElement;
       element.style.display = 'none';
+
+      let element_no_content = document.querySelector(".noContent") as HTMLElement;
+      element_no_content.style.display = 'flex';
+  
+      let element_history_container = document.querySelector(".history_container") as HTMLElement;
+      element_history_container.style.display = 'none';
+
+      let elementHistoryTitle = document.querySelector(".current") as HTMLElement;
+      elementHistoryTitle.style.display = 'none'; 
     }
 
-    let historico: number[] = [];
-    historico = JSON.parse(localStorage.getItem('historico') || '[]');
-
-    if(historico.length <= 0){
+    if(localStorage.length <= 0){
 
     let element_no_content = document.querySelector(".noContent") as HTMLElement;
     element_no_content.style.display = 'flex';
@@ -120,16 +132,16 @@ export class HistoryComponent implements OnInit, AfterViewInit {
     elementHistoryTitle.style.display = 'none'; 
 
     } else {
-      console.log('Errorrr');
+      console.log('Error');
     }
   }
 
   verifyHistory(){
-    let verifyValue = JSON.parse(localStorage.getItem('lastNumber') || 'null');
+    let verifyValue = JSON.parse(localStorage.getItem('lastNumber') || '[]');
 
-    console.log(localStorage.getItem('lastNumber') + 'wrongg')
+    console.log(localStorage.getItem('lastNumber'))
 
-    if(verifyValue > 0){
+    if(verifyValue > 0 || null){
       localStorage.removeItem('verify');
       console.log('works')
     } else {
@@ -156,17 +168,11 @@ export class HistoryComponent implements OnInit, AfterViewInit {
     this.selectedItems.fill(true);
   }
 
-  deselecionarTodos() {
-    this.isMarked = false;
-    this.selectLastNumber = false;
-    this.selectedItems.fill(false);
-  }  
-
   deleteHistory(){
     this.excluirItems();
     console.log(localStorage.getItem('verify'))
     // this.deleteLastNumber();
 
-    location.reload();
+    // location.reload();
   }
 }

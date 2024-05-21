@@ -17,10 +17,15 @@
 ._head #logo_colorida {
     width: 48px;
     height: 49px;
+    margin: 4px;
 }
 
 #logo_colorida_desktop {
     display: none;
+}
+
+#logo_colorida:hover {
+    cursor: pointer;
 }
 
 ._head #space {

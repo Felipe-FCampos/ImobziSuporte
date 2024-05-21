@@ -10,7 +10,11 @@ import { HistoryService } from '../history.service';
 
 export class CalculaImpostoComponent {
 
-  constructor(private sidebarService: SidebarService, private viewContainerRef: ViewContainerRef, private historyService: HistoryService) { }
+  constructor(
+    private sidebarService: SidebarService, 
+    private viewContainerRef: ViewContainerRef, 
+    private historyService: HistoryService
+  ) { }
 
   // Verifica a opcao recebida e habilita o campo de taxa de adm
   enableAdmFee(): void {
@@ -20,69 +24,53 @@ export class CalculaImpostoComponent {
   disableAdmFee(): void {
     (document.getElementById("admFee") as HTMLInputElement).disabled = true;
   }
-
   // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 
   // Verifica qual a opcao selecionada na taxa de adm
   selectAdmFee() {
     const selectedOption = document.querySelector('input[name="optionAdmFee"]:checked') as HTMLInputElement;
+    const opcao = selectedOption.value;
 
-    if (selectedOption) {
-      const opcao = selectedOption.value;
-      return opcao;
-    }
-
-    return null;
+    return opcao;
   }
 
   selectSimplifiedDiscount() {
     const selectedOption = document.querySelector('input[name="optionSimplifiedDiscount"]:checked') as HTMLInputElement;
+    const opcao = selectedOption.value;
 
-    if (selectedOption) {
-      const opcao = selectedOption.value;
-      return opcao;
-    }
-
-    return null;
-  }
+    return opcao;
+  };
 
   // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-
-
   // Calcula qual deducao deve ser feita
   calculaDeducao(valorFinal: number) {
-
     let tabelaDeAliquota: number[] = [0.075, 0.15, 0.225, 0.275];
     let tabelaDeDeducao: number[] = [169.44, 381.44, 662.77, 896];
 
     if (valorFinal <= 2259.20) {
       valorFinal = 0.00;
       return valorFinal;
-
-    } else if (valorFinal > 2259.20 && valorFinal <= 2826.65) {
+    } 
+    else if (valorFinal > 2259.20 && valorFinal <= 2826.65) {
       valorFinal = valorFinal * tabelaDeAliquota[0];
       valorFinal = valorFinal - tabelaDeDeducao[0];
       return valorFinal;
-
-    } else if (valorFinal > 2826.65 && valorFinal <= 3751.05) {
-
+    } 
+    else if (valorFinal > 2826.65 && valorFinal <= 3751.05) {
       valorFinal = valorFinal * tabelaDeAliquota[1];
       valorFinal = valorFinal - tabelaDeDeducao[1];
       return valorFinal;
-
-    } else if (valorFinal > 3751.05 && valorFinal <= 4664.68) {
-
+    } 
+    else if (valorFinal > 3751.05 && valorFinal <= 4664.68) {
       valorFinal = valorFinal * tabelaDeAliquota[2];
       valorFinal = valorFinal - tabelaDeDeducao[2];
       return valorFinal;
-
-    } else if (valorFinal > 4664.68) {
-
+    } 
+    else if (valorFinal > 4664.68) {
       valorFinal = valorFinal * tabelaDeAliquota[3];
       valorFinal = valorFinal - tabelaDeDeducao[3];
-
       return valorFinal;
     }
 
@@ -117,14 +105,17 @@ export class CalculaImpostoComponent {
 
       // Chama a função selectSimplifiedDiscount(), retorna se a opcao selecionada é sim ou não, e armazena na const simpleDiscount
       const simpleDiscount = this.selectSimplifiedDiscount();
+      this.saveSimpleDiscount(simpleDiscount)
+      console.log(simpleDiscount);
 
       // Compara os valores da opção e executa o cálculo dependendo da opção selecionada
-      if (simpleDiscount == 'true') {
+      if (simpleDiscount == 'Sim') {
         console.log('SimpleDiscount is true.');
 
-        valorAluguel = valorAluguel - valorDoDescontoSimplificado;
+        let valorAluguelSalvo = valorAluguel;
+        valorAluguel = valorAluguelSalvo - valorDoDescontoSimplificado;
 
-      } else if (simpleDiscount == 'false') {
+      } else if (simpleDiscount == 'Não') {
         console.log('SimpleDiscount is false.');
 
       } else {
@@ -133,13 +124,14 @@ export class CalculaImpostoComponent {
 
       // Chama a função selectAdmFee(), retorna se a opcao selecionada é sim ou não, e armazena na const admFee
       const admFee = this.selectAdmFee();
+      this.saveAdmFeeDeduct(admFee);
 
-      if (admFee == 'true') {
+      if (admFee == 'Sim') {
         console.log('AdmFee is true.');
 
         valorAluguel = valorAluguel - taxaDeAdm;
 
-      } else if (admFee == 'false') {
+      } else if (admFee == 'Não') {
         console.log('admFee is false.');
 
       } else {
@@ -151,11 +143,12 @@ export class CalculaImpostoComponent {
 
       this.saveCalculatorValue(valorFinal);
       this.getLastNumber(valorFinal);
+      this.saveAdmFee(taxaDeAdm);
 
         // Finaliza o código exibindo o valor do IRRF
 
         if(valorFinal != 0) {
-        document.getElementById("result")!.innerText = valorFinal.toFixed(2);
+        document.getElementById("result")!.innerText = valorFinal.toFixed(2).replace(".",",");
 
         console.log([
           {
@@ -203,5 +196,17 @@ export class CalculaImpostoComponent {
 
   getLastNumber(lastNumber: number){
     this.historyService.saveLastNumber(lastNumber);
+  }
+
+  saveSimpleDiscount(opcao: string){
+    this.historyService.addHistorySimpleDicount(opcao);
+  }
+
+  saveAdmFeeDeduct(opcao: string){
+    this.historyService.addHistoryAdmFee(opcao);
+  }
+
+  saveAdmFee(value: number){
+    this.historyService.addAdmFee(value);
   }
 }

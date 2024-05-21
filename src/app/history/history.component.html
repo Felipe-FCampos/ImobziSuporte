@@ -1,25 +1,97 @@
 <main>
+    <div class="background"></div>
     <div class="menu">
         <img id="list_branca" src="../../assets/list_branca.svg" alt="" (click)="openSideBar()">
-        <img id="logo_branca" src="../../assets/logoImobzi.svg" alt="">
+        <img id="logo_branca" src="../../assets/logoImobzi.svg" alt="" routerLink="/home">
         <div id="space"></div>
+    </div>
+
+    <section class="_head">
+        <img id="list" src="../../assets/list_colored.svg" alt="" (click)="openSideBar()">
+        <img id="logo_colorida" src="../../assets/logo_colorida.svg" alt="" routerLink="/home">
+        <div class="navigation">
+            <nav>
+                <a routerLink="/home" id="menuLink">Home</a>
+                <a routerLink="/hitory" id="menuLink">Histórico</a>
+                <a href="" id="menuLink">Perfil</a>
+            </nav>
+        </div>
+        <div id="space"></div>
+    </section>
+
+    <div class="popup_delete_history">
+        <h1>Deseja prosseguir?</h1>
+        <p>Após a exclusão, não será possível sua recuperação.</p>
+        <p>Deseja prosseguir com a exclusão dos itens selecionados?</p>
+        <div class="delete_buttons">
+            <button>Sim</button>
+            <button>Não</button>
+        </div>
+    </div>
+
+    <div class="popup_delete_all_history">
+        <h1>Tem certeza?</h1>
+        <p>Esse procedimento irá apagar todo o historico e sua recuperação não será possível, deseja prosseguir?</p>
+        <div class="delete_buttons">
+            <button>Sim</button>
+            <button>Não</button>
+        </div>
     </div>
 
     <div class="title_back">
         <img src="../../assets/back.svg" alt="" routerLink="/home">
-        <h1>Histórico</h1>
-        <div id="space"></div>
+        <h1>Seu histórico</h1>
+        <div class="trashCan"><img src="../../assets/trash.svg" alt="" (click)="deleteHistory()"></div>
     </div>
 
+    <div class="title_history">
+        <h1>Seu histórico</h1>
+        <div class="buttons">
+            <button id="novoCalculo" routerLink="/irrf">Fazer novo cálculo</button>
+            <div class="trashCan"><img src="../../assets/trash.svg" alt="" (click)="deleteHistory()"></div>
+        </div>
+    </div>
+
+
+    <section class="noContent">
+        <img src="../../assets/info.svg" alt="">
+        <h1>Não há dados no histórico!</h1>
+    </section>
+
+
+    <div class="current">
+        <h1>Recente</h1>
+        <div class="selectAllBox"><h1>Selecionar todos</h1><button (click)="selecionarTodos()" [class.marked]="isMarked"></button></div>
+    </div>
     <section class="history_container">
         <div class="lastNumber">
-            <h1>{{ valorFinal | number: '.2' }}</h1>
+            <div class="number_and_checkbox">
+                <label for="checkbox_history">
+                    <input id="checkbox_history" type="checkbox" (change)="lastNumberSelected()">
+                    <span class="custom_checkbox"></span>
+                </label>
+                <h1>{{ valorFinal | number: '.2' }}</h1>
+            </div>
+            <img src="../../assets/arrow.svg" alt="">
+            <h1>Desconto simplificado: {{ simplifiedDiscountHistory[simplifiedDiscountHistory.length - 1] }}</h1>
+            <h1>Dedução da taxa de administração: {{ admFeeDeductHistory[admFeeDeductHistory.length - 1] }}</h1>
+            <h1>Valor da taxa: {{ admFeeHistory[admFeeHistory.length - 1] }}</h1>
         </div>
 
-        <div *ngFor="let item of reverseHistory()">
-            <h2>{{ item | number: '.2' }}</h2>
-            <hr>
-        </div>
+        <hr>
 
+        <div class="pastHistory" *ngFor="let item of reverseHistory(); let i = index">
+            <div class="number_and_checkbox">
+                <label [for]="'checkbox_pastHistory_' + i">
+                    <input #checkbox [id]="'checkbox_pastHistory_' + i" type="checkbox" name="item_history" [checked]="selectedItems[i]" (change)="selecionado(i)">
+                        <span class="custom_checkbox"></span>
+                </label>
+                <h2>{{ isNumber(item.value) ? (item.value | number: '.2'): '' }}</h2>
+            </div>
+            <img src="../../assets/arrow.svg" alt="">
+            <h2>Desconto simplificado: {{ item.simpleDiscount }}</h2>
+            <h2>Dedução da taxa de administração: {{ item.admFeeDeduct }}</h2>
+            <h2>Valor da taxa: {{ item.admFee }}</h2>
+        </div>
     </section>
 </main>

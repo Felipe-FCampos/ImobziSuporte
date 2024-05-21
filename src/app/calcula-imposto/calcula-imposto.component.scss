@@ -1,3 +1,7 @@
+._head {
+    display: none;
+}
+
 .menu {
     background-color: #0092A5;
     width: 100%;
@@ -11,6 +15,14 @@
 
 .menu #space {
     padding: 24px;
+}
+
+#logo_colorida {
+    margin: 4px;
+}
+
+#logo_colorida:hover {
+    cursor: pointer;
 }
 
 .menu #logo_branca {
@@ -27,6 +39,7 @@
     justify-content: space-between;
     margin-top: 32px;
     margin-left: 16px;
+    margin-right: 16px;
 }
 
 .title_back h1 {
