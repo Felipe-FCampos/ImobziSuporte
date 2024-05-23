@@ -178,10 +178,12 @@
         color: #EAEAEA;
         font-size: 18px;
         letter-spacing: 1px;
+        transition: .2s;
     }
 
     .button_calcular #_calcular:hover {
-        background-color: #1ab19a;
+        background-color: #02DEDA;
+        color: #0092A5;
         cursor: pointer;
         transition: .2s;
     }

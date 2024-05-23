@@ -61,13 +61,17 @@
 
     <div class="current">
         <h1>Recente</h1>
-        <div class="selectAllBox"><h1>Selecionar todos</h1><button (click)="selecionarTodos()" [class.marked]="isMarked"></button></div>
+        <div class="selectAllBox">
+            <h1>Selecionar todos</h1>
+            <button id="selectAllButton" (click)="selecionarTodos()" [class.marked]="isMarked"></button>
+            <button id="notSelectAllButton" (click)="deselecionarTodos()" [class.unMarked]="isNotMarked"></button>
+        </div>
     </div>
     <section class="history_container">
         <div class="lastNumber">
             <div class="number_and_checkbox">
                 <label for="checkbox_history">
-                    <input id="checkbox_history" type="checkbox" (change)="lastNumberSelected()">
+                    <input id="checkbox_history" [checked]="isChecked" type="checkbox" (change)="lastNumberSelected()">
                     <span class="custom_checkbox"></span>
                 </label>
                 <h1>{{ valorFinal | number: '.2' }}</h1>
@@ -75,7 +79,7 @@
             <img src="../../assets/arrow.svg" alt="">
             <h1>Desconto simplificado: {{ simplifiedDiscountHistory[simplifiedDiscountHistory.length - 1] }}</h1>
             <h1>Dedução da taxa de administração: {{ admFeeDeductHistory[admFeeDeductHistory.length - 1] }}</h1>
-            <h1>Valor da taxa: {{ admFeeHistory[admFeeHistory.length - 1] ? (admFeeHistory[admFeeHistory.length - 1] | number: '.2') : '0,00' }}</h1>
+            <h1>Valor da taxa: {{ admFeeHistory[admFeeHistory.length - 1] ? (admFeeHistory[admFeeHistory.length - 1] | number: '.2') : '00,00' }}</h1>
         </div>
 
         <hr>
@@ -91,7 +95,7 @@
             <img src="../../assets/arrow.svg" alt="">
             <h2>Desconto simplificado: {{ item.simpleDiscount }}</h2>
             <h2>Dedução da taxa de administração: {{ item.admFeeDeduct }}</h2>
-            <h2>Valor da taxa: {{ item.admFee ? (item.admFee | number: '.2') : '0.00' }}</h2>
+            <h2>Valor da taxa: {{ item.admFee ? (item.admFee | number: '.2') : '00.00' }}</h2>
         </div>
     </section>
 </main>

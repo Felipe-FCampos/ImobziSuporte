@@ -53,7 +53,19 @@ h2 {
     border-radius: 4px;
 }
 
+.selectAllBox button:hover {
+    cursor: pointer;
+}
+
 .selectAllBox button.marked {
+    background-image: url('../../assets/check.svg');
+    background-position: center;
+    background-color: #0194A6;
+    color: white;
+}
+
+.selectAllBox button.unMarked {
+    display: none;
     background-image: url('../../assets/check.svg');
     background-position: center;
     background-color: #0194A6;
@@ -134,6 +146,14 @@ h2 {
 
 .pastHistory input[type="checkbox"] {
     display: none;
+}
+
+.lastNumber .custom_checkbox:hover {
+    cursor: pointer;
+}
+
+.pastHistory .custom_checkbox:hover {
+    cursor: pointer;
 }
 
 .lastNumber input[type="checkbox"]+.custom_checkbox::before {

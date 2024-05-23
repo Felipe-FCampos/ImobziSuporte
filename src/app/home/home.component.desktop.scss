@@ -26,6 +26,7 @@
 
     ._content_desktop {
         display: block;
+        margin-top: -16px;
     }
 
     .calculator {
@@ -58,7 +59,7 @@
         background-image: url(../../assets/background_irrf.svg);
         background-size: cover;
         width: 292px;
-        height: 128px;
+        height: 114px;
         border: none;
         font-size: 28px;
         color: #eaeaea;
@@ -78,11 +79,12 @@
         background-image: url(../../assets/backgoround_multas.svg);
         background-size: cover;
         width: 292px;
-        height: 128px;
+        height: 114px;
         border: none;
         font-size: 28px;
         color: #eaeaea;
         letter-spacing: 1px;
+        border-radius: 8px;
         transition: .7s;
     }
 
@@ -97,11 +99,12 @@
         background-image: url(../../assets/background_dias.svg);
         background-size: cover;
         width: 292px;
-        height: 128px;
+        height: 114px;
         border: none;
         font-size: 28px;
         color: #eaeaea;
         letter-spacing: 1px;
+        border-radius: 8px;
         transition: .7s;
     }
 

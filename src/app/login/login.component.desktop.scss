@@ -63,16 +63,18 @@
         width: 35%;
         padding-block: 100%;
         background-color: #fff;
-        margin-left: -60rem;
+        margin-left: -65%;
     }
 
     .inputText button {
         background-color: #0092A5;
         color: #eaeaea;
+        transition: .2s;
     }
 
     .inputText button:hover {
-        background-color: #1ab19a;
+        background-color: #02DEDA;
+        color: #0092A5;
         cursor: pointer;
         transition: .2s;
     }

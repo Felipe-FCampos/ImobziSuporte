@@ -15,6 +15,7 @@ export class HistoryComponent implements OnInit, AfterViewInit {
 
   selectedItems: boolean[] = [];
   selectLastNumber: boolean = false;
+  isChecked: boolean = false;
   verifying: boolean = false;
 
   historico: number[] = [];
@@ -26,6 +27,7 @@ export class HistoryComponent implements OnInit, AfterViewInit {
   admFeeTax!: number;
 
   isMarked = false;
+  isNotMarked = true;
 
   constructor(private sideBarService: SidebarService, private viewContentRef: ViewContainerRef, private historyService: HistoryService) { 
     
@@ -160,13 +162,28 @@ export class HistoryComponent implements OnInit, AfterViewInit {
   selecionarTodos(){
     this.isMarked = !this.isMarked;
     this.selectLastNumber = !this.selectLastNumber;
+    this.isChecked = !this.isChecked;
     this.selectedItems.fill(true);
+
+    let element = document.querySelector('#selectAllButton') as HTMLElement;
+    element.style.display = 'none';
+
+    let element_marked = document.querySelector('#notSelectAllButton') as HTMLElement;
+    element_marked.style.display = 'flex';
   }
 
   deselecionarTodos() {
     this.isMarked = false;
     this.selectLastNumber = false;
+    this.isChecked = !this.isChecked;
     this.selectedItems.fill(false);
+
+
+    let element = document.querySelector('#selectAllButton') as HTMLElement;
+    element.style.display = 'flex';
+
+    let element_marked = document.querySelector('#notSelectAllButton') as HTMLElement;
+    element_marked.style.display = 'none';
   }  
 
   deleteHistory(){
