@@ -84,13 +84,13 @@
         </section>
 
         <div class="button_calcular">
-            <button id="_calcular" (click)="calculaImposto()" type="submit">Calcular</button>
+            <button id="_calcular" (click)="somar()" type="submit">Calcular</button>
         </div>
 
         <div class="result">
             <h2>Resultado:</h2>
             <div class="final_result">
-                <h1>R$ <span id="result"></span></h1>
+                <h1>R$ <span id="result">{{ resultado }}</span></h1>
             </div>
         </div>
     </section>
