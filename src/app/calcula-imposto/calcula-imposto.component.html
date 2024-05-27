@@ -90,7 +90,7 @@
         <div class="result">
             <h2>Resultado:</h2>
             <div class="final_result">
-                <h1>R$ <span id="result">{{ resultado }}</span></h1>
+                <h1>R$ <span id="result">{{ resultado | number: '.2' }}</span></h1>
             </div>
         </div>
     </section>
