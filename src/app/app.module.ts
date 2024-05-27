@@ -15,6 +15,7 @@ import { CarouselComponent } from './carousel/carousel.component';
 import { CommonModule } from '@angular/common';
 import { DecimalPipe } from '@angular/common';
 import { MultasejurosComponent } from './multasejuros/multasejuros.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { MultasejurosComponent } from './multasejuros/multasejuros.component';
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
     CommonModule,
-   FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [DecimalPipe],
   bootstrap: [AppComponent]

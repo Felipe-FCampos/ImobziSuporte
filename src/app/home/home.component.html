@@ -47,6 +47,34 @@
             <div class="calculator">
                 <div class="title_desktop">
                     <h1>Calculadora</h1>
+                    <h1>Mensagem da API: {{ mensagem ? mensagem['greetings'] : '' }}</h1>
+                    <input type="text" id="nameForApi" name="nameForApi" value="text" style="width: 256px; margin: 4rem;">
+                    <button (click)="showName()">Mostrar nome</button>
+                    <!-- <h1>Mensagem da API: {{ mensagem ? mensagem['Sua mensagem é'] : '' }}</h1> -->
+                    <h1>Mensagem da API: {{ name ? name : ''}}</h1>
+                    <hr>
+                    <input type="number" id="num1" name="num1" style="width: 256px; margin: 4rem;">
+                    <input type="number" id="num2" name="num2" style="width: 256px; margin: 4rem;">
+
+                    
+                    <input type="radio" name="optionSimplifiedDiscount" id="yes" value="Sim">
+                    <label for="yes">Sim1</label>
+                    
+                    <input type="radio" name="optionSimplifiedDiscount" id="no" value="Não">
+                    <label for="no">Não1</label>
+
+                    <input type="radio" name="opcaoAdmFee" id="yes" value="Sim">
+                    <label for="yes">Sim</label>
+                    
+                    <input type="radio" name="opcaoAdmFee" id="no" value="Não">
+                    <label for="no">Não</label>
+
+                    <button (click)="somar()">Mostrar resultado</button>
+                    <h1>Resultado: {{ resultado }}</h1>
+                    <hr>
+                    <div class="nomes" *ngFor="let nome of names">
+                        <h1>Lista: {{ nome ? nome : 'teste' }}</h1>
+                    </div>
                 </div>
                 <div class="calculatorOptions">
                     <button class="irrfButton" routerLink="/irrf">IRRF</button>
