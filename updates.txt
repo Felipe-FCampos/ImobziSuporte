@@ -1,4 +1,31 @@
----Current Version v1.12.2
+---Current Version v2.0.1
+
+Added:
+- None
+
+Bugs fixed:
+- CORS problems No-Acess-Origin
+
+
+---Last Version v2.0.0
+
+Added:
+- API Integration
+
+Bugs fixed:
+- None
+
+
+---Version v1.13.0
+
+Added:
+- First Test Calculator with API
+
+Bugs fixed:
+- None
+
+
+---Version v1.12.2
 
 Added: 
 - History page
@@ -7,13 +34,15 @@ Added:
 Bugs fixed:
 - Input selecteds
 
----Last Version v1.11.4
+
+--- Version v1.11.4
 
 Added:
 - None
 
 Bugs fixed:
 - Radio buttons
+
 
 ---Version v1.11.3
 
@@ -24,6 +53,7 @@ Bugs fixed:
 - Buttons ticket and days were returning nothing, now they return an alert saying "wait for updates".
 
 Note: those updates (buttons ticket and days) will be made in the future.
+
 
 ---Version v1.11.2
 
