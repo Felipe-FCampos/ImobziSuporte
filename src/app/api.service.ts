@@ -7,12 +7,9 @@ import { ApiResponse } from './api-response.model';
 })
 export class ApiService {
 
-  num1!: number;
-  num2!: number;
-
   name!: string;
 
-  private apiUrl = 'https://imobzisuporteapi.onrender.com/'
+  private apiUrl = 'http://127.0.0.1:8000/'
 
   constructor(private http: HttpClient) { }
 
