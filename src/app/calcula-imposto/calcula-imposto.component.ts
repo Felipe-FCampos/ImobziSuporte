@@ -68,6 +68,9 @@ export class CalculaImpostoComponent {
 
   somar(){
 
+    let element = document.querySelector('.loading') as HTMLElement;
+    element.style.display = 'flex';
+
     let inputRent = document.getElementById("rent") as HTMLInputElement;
     let inputRecipient = document.getElementById("recipient") as HTMLInputElement;
     let inputAdmFee = document.getElementById("admFee") as HTMLInputElement;
@@ -86,6 +89,11 @@ export class CalculaImpostoComponent {
       this.opcao = this.add
       this.opcaoAdmFee = this.add
       console.log(this.resultado)
+
+      this.saveCalculatorValue(this.resultado);
+
+      let element = document.querySelector('.loading') as HTMLElement;
+      element.style.display = 'none';
     })
     console.log(this.resultado)
   }
