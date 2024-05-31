@@ -16,6 +16,7 @@ import { CommonModule } from '@angular/common';
 import { DecimalPipe } from '@angular/common';
 import { MultasejurosComponent } from './multasejuros/multasejuros.component';
 import { HttpClientModule } from '@angular/common/http';
+import { CalendarModule, DatePickerModule, TimePickerModule, DateRangePickerModule, DateTimePickerModule } from '@syncfusion/ej2-angular-calendars';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,7 @@ import { HttpClientModule } from '@angular/common/http';
     HistoryComponent,
     SidebarComponent,
     CarouselComponent,
-    MultasejurosComponent
+    MultasejurosComponent,
   ],
   imports: [
     BrowserModule,
@@ -34,7 +35,12 @@ import { HttpClientModule } from '@angular/common/http';
     AngularFireModule.initializeApp(environment.firebase),
     CommonModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    // CalendarModule, 
+    // DatePickerModule, 
+    // TimePickerModule, 
+    // DateRangePickerModule, 
+    // DateTimePickerModule
   ],
   providers: [DecimalPipe],
   bootstrap: [AppComponent]

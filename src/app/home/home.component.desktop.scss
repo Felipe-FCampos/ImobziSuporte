@@ -34,9 +34,19 @@
         flex-direction: column;
     }
 
+    .tasks {
+        display: flex;
+        flex-direction: column;
+    }
+
     .calculatorOptions {
         display: flex;
         margin-top: 16px;
+        margin-left: 4%;
+    }
+
+    .tasksOptions {
+        display: flex;
         margin-left: 4%;
     }
 
@@ -49,7 +59,21 @@
         margin-bottom: -8px;
     }
 
+    .tasks .title_desktop h1 {
+        margin-left: 4%;
+        font-family: 'Helvetica', sans-serif;
+        font-weight: 500;
+        font-size: 20px;
+        color: #0194A6;
+    }
+
     .calculatorOptions button {
+        font-family: 'Roboto', sans-serif;
+        margin-right: 16px;
+        font-weight: 300;
+    }
+
+    .tasksOptions button {
         font-family: 'Roboto', sans-serif;
         margin-right: 16px;
         font-weight: 300;
@@ -113,6 +137,32 @@
         color: #015965;
         transition: .7s;
         cursor: pointer;
+    }
+
+    .createTaskButton {
+        background-image: url(../../assets/create_task.svg);
+        background-size: cover;
+        width: 384px;
+        height: 114px;
+        border: none;
+        font-size: 28px;
+        color: #eaeaea;
+        letter-spacing: 1px;
+        border-radius: 8px;
+        transition: .7s;
+    }
+
+    .seeTaskButton {
+        background-image: url(../../assets/see_task.svg);
+        background-size: cover;
+        width: 384px;
+        height: 114px;
+        border: none;
+        font-size: 28px;
+        color: #eaeaea;
+        letter-spacing: 1px;
+        border-radius: 8px;
+        transition: .7s;
     }
 
     #list {
