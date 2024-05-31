@@ -29,27 +29,32 @@
         margin-top: -16px;
     }
 
-    .calculator {
+    .calculator, .tasks, .knowleadge {
         display: flex;
         flex-direction: column;
+        margin-bottom: 8px;
     }
 
-    .calculatorOptions {
+    .calculatorOptions, .tasksOptions, .knowledgeOptions {
         display: flex;
         margin-top: 16px;
         margin-left: 4%;
     }
 
-    .calculator .title_desktop h1 {
+    .calculator .title_desktop h1,
+    .tasks .title_desktop h1,
+    .knowleadge .title_desktop h1 {
         margin-left: 4%;
         font-family: 'Helvetica', sans-serif;
         font-weight: 500;
-        font-size: 20px;
+        font-size: 22px;
         color: #0194A6;
         margin-bottom: -8px;
     }
 
-    .calculatorOptions button {
+    .calculatorOptions button, 
+    .tasksOptions button,
+    .knowledgeOptions button {
         font-family: 'Roboto', sans-serif;
         margin-right: 16px;
         font-weight: 300;
@@ -110,6 +115,88 @@
 
     .propButton:hover {
         background-image: url('../../assets/background_dias_hover.svg');
+        color: #015965;
+        transition: .7s;
+        cursor: pointer;
+    }
+
+    .createTaskButton {
+        background-image: url(../../assets/create_task.svg);
+        background-size: cover;
+        background-position: .3px;
+        width: 364px;
+        height: 114px;
+        border: none;
+        font-size: 28px;
+        color: #eaeaea;
+        letter-spacing: 1px;
+        border-radius: 8px;
+        transition: .7s;
+    }
+
+    .createTaskButton:hover {
+        background-image: url('../../assets/create_task_hover.svg');
+        color: #015965;
+        transition: .7s;
+        cursor: pointer;
+    }
+
+    .seeTaskButton {
+        background-image: url(../../assets/see_task.svg);
+        background-size: cover;
+        background-position: .3px;
+        width: 364px;
+        height: 114px;
+        border: none;
+        font-size: 28px;
+        color: #eaeaea;
+        letter-spacing: 1px;
+        border-radius: 8px;
+        transition: .7s;
+    }
+
+    .seeTaskButton:hover {
+        background-image: url('../../assets/see_tasks_hover.svg');
+        color: #015965;
+        transition: .7s;
+        cursor: pointer;
+    }
+
+    .doubts {
+        background-image: url('../../assets/doubts.svg');
+        background-size: cover;
+        width: 416px;
+        height: 114px;
+        border: none;
+        font-size: 28px;
+        color: #eaeaea;
+        letter-spacing: 1px;
+        border-radius: 8px;
+        transition: .7s;
+    }
+
+    .doubts:hover {
+        background-image: url('../../assets/doubts_hover.svg');
+        color: #015965;
+        transition: .7s;
+        cursor: pointer;
+    }
+
+    .procedure {
+        background-image: url('../../assets/proceed.svg');
+        background-size: cover;
+        width: 416px;
+        height: 114px;
+        border: none;
+        font-size: 28px;
+        color: #eaeaea;
+        letter-spacing: 1px;
+        border-radius: 8px;
+        transition: .7s;
+    }
+
+    .procedure:hover {
+        background-image: url('../../assets/proceed_hover.svg');
         color: #015965;
         transition: .7s;
         cursor: pointer;
