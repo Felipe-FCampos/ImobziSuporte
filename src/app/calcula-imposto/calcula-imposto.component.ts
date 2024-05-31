@@ -6,7 +6,7 @@ import { ApiService } from '../api.service';
 @Component({
   selector: 'app-calcula-imposto',
   templateUrl: './calcula-imposto.component.html',
-  styleUrls: ['./calcula-imposto.component.scss', './calcula-imposto.component.desktop.scss']
+  styleUrls: ['../app.component.scss', './calcula-imposto.component.scss', './calcula-imposto.component.desktop.scss']
 })
 
 export class CalculaImpostoComponent {

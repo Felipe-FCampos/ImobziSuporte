@@ -1,25 +1,5 @@
 @media(min-width: 576px) {
 
-    hr {
-        background-color: #0092A5;
-        height: 1px;
-        color: #0092A5;
-        border: none;
-        opacity: 50%;
-    }
-
-    ._head {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    ._head img {
-        width: 34px;
-        height: 25px;
-        margin: 8px;
-    }
-
     ._content {
         display: none;
     } 
@@ -31,24 +11,6 @@
 
     #list {
         display: none;
-    }
-
-    .navigation {
-        display: flex;
-        padding: 0px;
-        font-family: 'Roboto', sans-serif;
-        font-size: 20px;
-    }
-
-    .navigation nav {
-        display: flex;
-        list-style-type: none;
-    }
-
-    .navigation a {
-        margin-inline: 16px;
-        padding-inline: 16px;
-        padding-block: 8px;
     }
 
     #menuLink {

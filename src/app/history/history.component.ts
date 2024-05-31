@@ -5,7 +5,8 @@ import { HistoryService } from '../history.service';
 @Component({
   selector: 'app-history',
   templateUrl: './history.component.html',
-  styleUrls: ['./history.component.scss', 
+  styleUrls: ['../app.component.scss',
+    './history.component.scss', 
   '../calcula-imposto/calcula-imposto.component.scss', 
   '../history/history.component.desktop.scss', 
   './history.popup.component.scss']
