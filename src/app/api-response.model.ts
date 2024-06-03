@@ -8,4 +8,5 @@ export interface ApiResponse {
     "names": string[]
     "resultado": number
     "add": string
+    "resultPropDays": number
   }

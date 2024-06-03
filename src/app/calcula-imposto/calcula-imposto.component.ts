@@ -88,14 +88,12 @@ export class CalculaImpostoComponent {
       this.resultado = items.resultado
       this.opcao = this.add
       this.opcaoAdmFee = this.add
-      console.log(this.resultado)
 
       this.saveCalculatorValue(this.resultado);
 
       let element = document.querySelector('.loading') as HTMLElement;
       element.style.display = 'none';
     })
-    console.log(this.resultado)
   }
 }
 

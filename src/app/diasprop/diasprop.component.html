@@ -1,4 +1,7 @@
 <main>
+    <div class="loading">
+        <div class="loader"></div>
+    </div>
     <section class="_head">
         <img id="logo_colorida" src="../../assets/logo_colorida.svg" alt="" routerLink="/home">
         <div class="navigation">
@@ -11,4 +14,42 @@
         <div id="space"></div>
     </section>
     <hr>
+
+    <div class="title_propDays_desktop">
+        <img src="../../assets/back.svg" alt="" routerLink="/home">
+        <h1>Cálculo dos dias proporcionais</h1>
+        <div id="spaceTitle"></div>
+    </div>
+
+    <body>
+        <section class="_content">
+            <section class="_calculatorPropDays">
+                <div class="calculator">
+                    <div class="startDate">
+                        <label for="">Data do início do contrato</label>
+                        <input type="date" id="dateInput">
+                    </div>
+                    <div class="dueDay">
+                        <label for="">Dia do vencimento</label>
+                        <select id="dynamicSelect">Dia</select>
+                    </div>
+                    <div class="rent">
+                        <label for="">Valor do Aluguel</label>
+                        <input type="text" id="rentPropDay" placeholder="R$ 4500,00">
+                    </div>
+                    <div class="space"></div>
+                </div>
+            </section>
+            <section class="result">
+                <h1>Resultado:</h1>
+                <div class="resultado">
+                    <h1>{{ resultPropDays ? 'R$ ' + (resultPropDays | number: '.2') : '' }}</h1>
+                </div>
+            </section>
+        </section>
+            <div class="button_propDays">
+                <button (click)="calcularPropDays()">Calcular</button>
+            </div>
+        
+    </body>
 </main>
