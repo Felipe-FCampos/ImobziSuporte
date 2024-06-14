@@ -1,4 +1,12 @@
----Current Version v3.0.0
+---Current Version v3.0.1
+
+Added:
+- None
+
+Bugs fixed:
+- API route
+
+---Last Version v3.0.0
 
 Added:
 - New integrastion with Notion
@@ -8,7 +16,7 @@ Bugs fixed:
 - Slow return from API
 
 
----Last Version v2.3.1
+---Version v2.3.1
 
 Added:
 - Proportional days calculator
