@@ -25,7 +25,6 @@ export class DuvidaComponent implements OnInit {
     const documentLocal = localStorage.getItem('document');
     this.document = JSON.parse(documentLocal || '[]');
 
-    console.log(this.document)
     this.route.params.subscribe((params) => {
       const id = params['id'];
         this.doc.getDocumentById(id).subscribe(
