@@ -7,7 +7,7 @@ import { Observable, map, tap } from 'rxjs';
 })
 export class DocumentsService {
 
-  private apiUrlDocs = 'https://apinotionintegrationsup.onrender.com/notion-data/';
+  private apiUrlDocs = 'https://apinotionintegrationsup.onrender.com/';
   private localStorageKey = 'documentsData'
 
   
