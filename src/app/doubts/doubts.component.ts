@@ -12,17 +12,31 @@ export class DoubtsComponent implements OnInit {
   constructor( private documentsService: DocumentsService){ }
 
   ngOnInit(): void {
-    let element = document.querySelector('.loading') as HTMLElement;
-    element.style.display = 'flex';
 
-    this.documents = this.documentsService.updateLocalStorage();
-    this.documentsService.getTitles().subscribe(data => {
-      this.documents = data;
+    const localDoc = localStorage.getItem('documentsData')
+
+    if(localDoc){
       let element = document.querySelector('.loading') as HTMLElement;
       element.style.display = 'none';
-    });
-  }
 
+      this.documents = this.documentsService.updateLocalStorage();
+      this.documentsService.getTitles().subscribe(data => {
+        this.documents = data;
+      });
+    } else {
+
+      let element = document.querySelector('.loading') as HTMLElement;
+      element.style.display = 'flex';
+
+      this.documents = this.documentsService.updateLocalStorage();
+      this.documentsService.getTitles().subscribe(data => {
+        this.documents = data;
+          let element = document.querySelector('.loading') as HTMLElement;
+          element.style.display = 'none';
+      });
+    }
+  }
+  
   filterDocuments: any[] = this.documents;
   select: string | null = null
 
