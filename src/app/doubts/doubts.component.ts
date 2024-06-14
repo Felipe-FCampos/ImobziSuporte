@@ -12,9 +12,14 @@ export class DoubtsComponent implements OnInit {
   constructor( private documentsService: DocumentsService){ }
 
   ngOnInit(): void {
+    let element = document.querySelector('.loading') as HTMLElement;
+    element.style.display = 'flex';
+
     this.documents = this.documentsService.updateLocalStorage();
     this.documentsService.getTitles().subscribe(data => {
       this.documents = data;
+      let element = document.querySelector('.loading') as HTMLElement;
+      element.style.display = 'none';
     });
   }
 

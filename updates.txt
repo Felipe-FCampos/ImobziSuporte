@@ -1,4 +1,12 @@
----Current Version v3.0.1
+---Current Version v3.0.2
+
+Added:
+- Loading
+
+Bugs fixed:
+- None
+
+---Last Version v3.0.1
 
 Added:
 - None
@@ -6,7 +14,7 @@ Added:
 Bugs fixed:
 - API route
 
----Last Version v3.0.0
+---Version v3.0.0
 
 Added:
 - New integrastion with Notion
