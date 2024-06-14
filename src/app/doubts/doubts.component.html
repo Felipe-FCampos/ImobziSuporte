@@ -1,0 +1,57 @@
+<main>
+    <section class="_head">
+        <img id="list" src="../../assets/list_colored.svg" alt="">
+        <img id="logo_colorida" src="../../assets/logo_colorida.svg" alt="" routerLink="/home">
+        <div class="navigation">
+            <nav>
+                <a routerLink="/home" id="menuLink">Home</a>
+                <a routerLink="/history" id="menuLink">Histórico</a>
+                <a href="" id="menuLink">Perfil</a>
+            </nav>
+        </div>
+        <div id="space"></div>
+    </section>
+    <hr>
+
+    <div class="title_doubts">
+        <img src="../../assets/back.svg" alt="" routerLink="/home">
+        <h1>Dúvidas frequentes</h1>
+        <div class="space"></div>
+    </div>
+
+    <section class="_doubts_content">
+        <div class="sectors">
+            <button (click)="filter('SUP')" [ngClass]="{'active': select === 'SUP'}">Suporte / CS</button>
+            <button (click)="filter('CRM')" [ngClass]="{'active': select === 'CRM'}">CRM</button>
+            <button (click)="filter('ERP')" [ngClass]="{'active': select === 'ERP'}">ERP</button>
+            <button (click)="filter('SITE')" [ngClass]="{'active': select === 'SITE'}">Site</button>
+            <button (click)="filter('IM')" [ngClass]="{'active': select === 'IM'}">Imobiliária Digital</button>
+            <button (click)="filter('INFRA')" [ngClass]="{'active': select === 'INFRA'}">Infraestrutura</button>
+            <button (click)="filter('MAKE')" [ngClass]="{'active': select === 'MAKE'}">Make</button>
+            <button (click)="filter('PROCEDIMENTO')" [ngClass]="{'active': select === 'PROCEDIMENTO'}">Procedimentos</button>
+        </div>
+        <!-- <div class="nothingSelected" *ngIf="filterDocuments.length === 0">
+            <div class="title_nothingSelected">
+                <h1>Em que posso te ajudar?</h1>
+                <p>Selecione um dos setores ao lado para verificar suas respectivas documentações.</p>
+            </div>
+            <div class="image_nothingSelected">
+                <img src="../../assets/doubts_icon.png" alt="">
+            </div>
+        </div> -->
+        <div class="items">
+            <div class="item" *ngFor="let item of documents">
+                <span class="main_info">
+                    <h2>{{ item.name }}</h2>
+                    <h3>{{ item.category}}</h3>
+                    <p [innerHTML]="formatContent(item.content, 100)"></p>
+                    <button [routerLink]="['/frequently-doubts/doubts', item.id]" >Ver mais</button>
+                </span>
+                <hr>
+                <span class="icon">
+                    <img src="../../assets/book.svg" alt="">
+                </span>
+            </div>
+        </div>
+    </section>
+</main>

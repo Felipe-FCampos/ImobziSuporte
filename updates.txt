@@ -1,4 +1,25 @@
----Current Version v2.0.1
+---Current Version v3.0.0
+
+Added:
+- New integrastion with Notion
+- New API made for integration with Notion
+
+Bugs fixed:
+- Slow return from API
+
+
+---Last Version v2.3.1
+
+Added:
+- Proportional days calculator
+- Support knowleadge
+- Start API integration with Notion
+
+Bugs fixed:
+- CORS problems No-Acess-Origin
+
+
+---Version v2.0.1
 
 Added:
 - None
@@ -7,7 +28,7 @@ Bugs fixed:
 - CORS problems No-Acess-Origin
 
 
----Last Version v2.0.0
+---Version v2.0.0
 
 Added:
 - API Integration

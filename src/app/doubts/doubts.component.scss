@@ -1,0 +1,20 @@
+.sectors button.active {
+    background-color: #02DEDA;
+    color: #0092A5;
+}
+
+.title_doubts {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 32px;
+    margin-left: 16px;
+    margin-right: 16px;
+}
+
+.title_doubts h1 {
+    font-family: 'Helvetica', sans-serif;
+    font-weight: 500;
+    font-size: 24px;
+    color: #0194A6;
+}

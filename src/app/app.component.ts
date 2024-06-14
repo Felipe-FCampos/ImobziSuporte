@@ -10,7 +10,7 @@ export class AppComponent {
   title = 'imobzi_calculadora';
 
   constructor(private router: Router ){
-    console.log('v2.0.1');
+    console.log('v2.3.1');
   }
   
   

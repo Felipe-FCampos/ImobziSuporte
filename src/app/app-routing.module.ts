@@ -6,6 +6,8 @@ import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { HistoryComponent } from './history/history.component';
 import { DiaspropComponent } from './diasprop/diasprop.component';
+import { DoubtsComponent } from './doubts/doubts.component';
+import { DuvidaComponent } from './duvida/duvida.component';
 
 const routes: Routes = [
 
@@ -28,6 +30,14 @@ const routes: Routes = [
   {
     path:'proportional-days',
     component: DiaspropComponent,
+  },
+  {
+    path:'frequently-doubts',
+    component: DoubtsComponent
+  },
+  {
+    path:'frequently-doubts/doubts/:id',
+    component: DuvidaComponent
   }
 ];
 

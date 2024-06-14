@@ -17,6 +17,8 @@ import { DecimalPipe } from '@angular/common';
 import { MultasejurosComponent } from './multasejuros/multasejuros.component';
 import { HttpClientModule } from '@angular/common/http';
 import { DiaspropComponent } from './diasprop/diasprop.component';
+import { DoubtsComponent } from './doubts/doubts.component';
+import { DuvidaComponent } from './duvida/duvida.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import { DiaspropComponent } from './diasprop/diasprop.component';
     SidebarComponent,
     CarouselComponent,
     MultasejurosComponent,
-    DiaspropComponent
+    DiaspropComponent,
+    DoubtsComponent,
+    DuvidaComponent
   ],
   imports: [
     BrowserModule,
