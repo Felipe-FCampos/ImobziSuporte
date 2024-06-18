@@ -88,20 +88,16 @@ export class CalculaImpostoComponent {
       this.resultado = items.resultado
       this.opcao = this.add
       this.opcaoAdmFee = this.add
-<<<<<<< HEAD
+
       console.log(this.resultado)
-=======
->>>>>>> main
 
       this.saveCalculatorValue(this.resultado);
 
       let element = document.querySelector('.loading') as HTMLElement;
       element.style.display = 'none';
     })
-<<<<<<< HEAD
     console.log(this.resultado)
-=======
->>>>>>> main
+
   }
 }
 
@@ -109,9 +105,8 @@ export class CalculaImpostoComponent {
 
 
 
-<<<<<<< HEAD
+
 // Versão anterior do cálculo em ./antigoCalculo.txt
-=======
 // Versão anterior do cálculo
 /*
   // Verifica qual a opcao selecionada na taxa de adm
@@ -270,4 +265,4 @@ export class CalculaImpostoComponent {
 
 
 */
->>>>>>> main
+

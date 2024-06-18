@@ -16,13 +16,11 @@ import { CommonModule } from '@angular/common';
 import { DecimalPipe } from '@angular/common';
 import { MultasejurosComponent } from './multasejuros/multasejuros.component';
 import { HttpClientModule } from '@angular/common/http';
-<<<<<<< HEAD
 import { CalendarModule, DatePickerModule, TimePickerModule, DateRangePickerModule, DateTimePickerModule } from '@syncfusion/ej2-angular-calendars';
-=======
 import { DiaspropComponent } from './diasprop/diasprop.component';
 import { DoubtsComponent } from './doubts/doubts.component';
 import { DuvidaComponent } from './duvida/duvida.component';
->>>>>>> main
+
 
 @NgModule({
   declarations: [
@@ -34,12 +32,9 @@ import { DuvidaComponent } from './duvida/duvida.component';
     SidebarComponent,
     CarouselComponent,
     MultasejurosComponent,
-<<<<<<< HEAD
-=======
     DiaspropComponent,
     DoubtsComponent,
     DuvidaComponent
->>>>>>> main
   ],
   imports: [
     BrowserModule,
@@ -47,16 +42,12 @@ import { DuvidaComponent } from './duvida/duvida.component';
     AngularFireModule.initializeApp(environment.firebase),
     CommonModule,
     FormsModule,
-<<<<<<< HEAD
     HttpClientModule,
     // CalendarModule, 
     // DatePickerModule, 
     // TimePickerModule, 
     // DateRangePickerModule, 
     // DateTimePickerModule
-=======
-    HttpClientModule
->>>>>>> main
   ],
   providers: [DecimalPipe],
   bootstrap: [AppComponent]
