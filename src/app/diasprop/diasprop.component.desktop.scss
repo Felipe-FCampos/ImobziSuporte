@@ -1,0 +1,140 @@
+@media(min-width: 576px) {
+
+    ._head {
+        display: flex;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    body {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .button_propDays {
+        padding-top: 16px;
+    }
+
+    .button_propDays button {
+        width: 632px;
+        height: 48px;
+        font-size: 16px;
+        color: #eaeaea;
+        background-color: #0194A6;
+        border: none;
+        border-radius: 8px;
+        transition: .2s;
+    }
+
+    .button_propDays button:hover {
+        background-color: #02DEDA;
+        color: #0092A5;
+        cursor: pointer;
+        transition: .2s;
+    }
+
+    ._content {
+        display: flex;
+        align-items: center;
+    }
+
+    ._calculatorPropDays {
+        display: flex;
+        justify-content: center;
+        margin-top: 32px;
+        margin-right: 32px;
+    }
+
+    ._calculatorPropDays label {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 500;
+        font-size: 18px;
+        color: #0194A6;
+    }
+
+    ._calculatorPropDays input {
+        width: 280px;
+        height: 64px;
+        font-size: 16px;
+        background-color: #eaeaea;
+        border-radius: 4px;
+        border: none;
+        margin-block: 8px;
+        padding-inline: 16px;
+    }
+
+    select {
+        width: 312px;
+        height: 64px;
+        font-size: 16px;
+        background-color: #eaeaea;
+        border-radius: 4px;
+        border: none;
+        margin-block: 8px;
+        padding-inline: 16px;
+    }
+
+    .startDate,
+    .dueDay,
+    .rent {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .first_line {
+        display: flex;
+        margin-bottom: 8px;
+    }
+
+    .title_propDays_desktop {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 32px;
+        margin-left: 16px;
+        margin-right: 16px;
+    }
+
+    .title_propDays_desktop h1 {
+        font-family: 'Helvetica', sans-serif;
+        font-weight: 500;
+        font-size: 24px;
+        color: #0194A6;
+    }
+
+    .result {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .result h1 {
+        padding-top: 12px;
+        font-family: 'Helvetica', sans-serif;
+        font-weight: 500;
+        font-size: 16px;
+        color: #0194A6;
+    }
+
+    .resultado {
+        margin-top: -8px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 256px;
+        height: 270px;
+        background-color: #eaeaea;
+        border-radius: 4px;
+        border: none;
+        padding-inline: 16px;
+    }
+
+    .resultado h1 {
+        font-size: 24px;
+    }
+}

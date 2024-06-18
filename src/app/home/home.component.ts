@@ -9,7 +9,7 @@ import { ApiResponse } from '../api-response.model';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss', './home.component.desktop.scss'],
+  styleUrls: ['../app.component.scss', './home.component.scss', './home.component.desktop.scss', './home_second.component.desktop.scss'],
 })
 export class HomeComponent implements OnInit {
 

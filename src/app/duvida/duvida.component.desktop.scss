@@ -1,0 +1,40 @@
+@media(min-width: 576px){
+    ._title {
+        display: flex;
+        justify-content: space-around;
+        padding-left: 4%;
+    }
+
+    ._title h1 {
+        font-size: 32px;
+        font-family: 'Helvetica', sans-serif;
+        font-weight: 500;
+        color: #0194A6;
+    }
+
+    .space {
+        padding: 16px;
+    }
+
+    ._content {
+        display: flex;
+        flex-direction: column;
+        padding-inline: 16%;
+    }
+    
+    ._content p {
+        font-size: 18px;
+        font-family: 'Helvetica', sans-serif;
+        font-weight: 500;
+        color: #636363;
+    }
+
+    ._content img {
+        width: 816px;
+        padding-inline: 12%;
+    }
+
+    ._title img:hover {
+        cursor: pointer;
+    }
+}

@@ -1,65 +1,40 @@
 @media(min-width: 576px) {
 
-    ._content {
-        display: none;
-    } 
-
-    ._content_desktop {
-        display: block;
-        margin-top: -16px;
-    }
-
-<<<<<<< HEAD
-    .calculator {
+    .calculator,
+    .tasks,
+    .knowleadge {
         display: flex;
         flex-direction: column;
+        margin-bottom: 8px;
     }
 
-    .tasks {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .calculatorOptions {
+    .calculatorOptions,
+    .tasksOptions,
+    .knowledgeOptions {
         display: flex;
         margin-top: 16px;
         margin-left: 4%;
     }
 
-    .tasksOptions {
-        display: flex;
-        margin-left: 4%;
-    }
-
-    .calculator .title_desktop h1 {
+    .calculator .title_desktop h1,
+    .tasks .title_desktop h1,
+    .knowleadge .title_desktop h1 {
         margin-left: 4%;
         font-family: 'Helvetica', sans-serif;
         font-weight: 500;
-        font-size: 20px;
+        font-size: 22px;
         color: #0194A6;
         margin-bottom: -8px;
     }
 
-    .tasks .title_desktop h1 {
-        margin-left: 4%;
-        font-family: 'Helvetica', sans-serif;
-        font-weight: 500;
-        font-size: 20px;
-        color: #0194A6;
-    }
-
-    .calculatorOptions button {
+    .calculatorOptions button,
+    .tasksOptions button,
+    .knowledgeOptions button {
         font-family: 'Roboto', sans-serif;
         margin-right: 16px;
         font-weight: 300;
     }
 
-    .tasksOptions button {
-        font-family: 'Roboto', sans-serif;
-        margin-right: 16px;
-        font-weight: 300;
-    }
-    
     .irrfButton {
         background-image: url(../../assets/background_irrf.svg);
         background-size: cover;
@@ -72,7 +47,7 @@
         border-radius: 8px;
         transition: .7s;
     }
-    
+
     .irrfButton:hover {
         background-image: url('../../assets/background_irrf_hover.svg');
         color: #015965;
@@ -123,7 +98,8 @@
     .createTaskButton {
         background-image: url(../../assets/create_task.svg);
         background-size: cover;
-        width: 384px;
+        background-position: .3px;
+        width: 364px;
         height: 114px;
         border: none;
         font-size: 28px;
@@ -131,12 +107,20 @@
         letter-spacing: 1px;
         border-radius: 8px;
         transition: .7s;
+    }
+
+    .createTaskButton:hover {
+        background-image: url('../../assets/create_task_hover.svg');
+        color: #015965;
+        transition: .7s;
+        cursor: pointer;
     }
 
     .seeTaskButton {
         background-image: url(../../assets/see_task.svg);
         background-size: cover;
-        width: 384px;
+        background-position: .3px;
+        width: 364px;
         height: 114px;
         border: none;
         font-size: 28px;
@@ -146,100 +130,51 @@
         transition: .7s;
     }
 
-=======
->>>>>>> main
-    #list {
-        display: none;
-    }
-
-    #menuLink {
-        position: relative;
-        color: #0092A5;
-        /* Cor do texto */
-        text-decoration: none;
-        /* Remover o sublinhado padrão do link */
-    }
-
-    #menuLink::before {
-        content: '';
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        width: 0;
-        height: 2px;
-        background-color: #0092A5;
-        /* Cor da linha */
-        transition: width 0.3s ease;
-        /* Transição suave da largura */
-    }
-
-    #menuLink:hover::before {
-        width: 100%;
-        /* Largura da linha ao passar o mouse */
-    }
-
-    #space {
-        display: none;
-    }
-
-    ._body .title h1 {
-        font-size: 20px;
-    }
-    
-    ._body .title h2 {
-        font-size: 20px;
-    }
-
-    ._body hr {
-        width: 84rem;
-        height: 1px;
-        display: flex;
-        justify-content: center;
-        background-color: #0092A5;
-        border-radius: 50%;
-    }
-
-    .image_home_screen {
-        display: flex;
-        margin: 0px;
-    }
-
-    .image_home_screen img {
-        width: 394px;
-        height: 256px;
-    }
-
-    .subtitle h1 {
-        font-size: 24px;
-    }
-
-    .help_title h1 {
-        font-size: 24px;
-    }
-
-    #calcularIrrf {
-        width: 24rem;
-        height: 51px;
-        border-radius: 8px;
-        border: none;
-        background-color: #0194A6;
-        color: #f3f3f3;
-        letter-spacing: 2px;
-    }
-
-    #acessarFaq {
-        width: 24rem;
-        height: 51px;
-        border-radius: 8px;
-        border: none;
-        background-color: #0194A6;
-        color: #f3f3f3;
-    }
-
-    #calcularIrrf:hover,
-    #acessarFaq:hover {
+    .seeTaskButton:hover {
+        background-image: url('../../assets/see_tasks_hover.svg');
+        color: #015965;
+        transition: .7s;
         cursor: pointer;
-        background-color: #02DEDA;
-        transition: .2s;
+    }
+
+    .doubts {
+        background-image: url('../../assets/doubts.svg');
+        background-size: cover;
+        background-position: 0px -10px;
+        width: 416px;
+        height: 114px;
+        border: none;
+        font-size: 28px;
+        color: #eaeaea;
+        letter-spacing: 1px;
+        border-radius: 8px;
+        transition: .7s;
+    }
+
+    .doubts:hover {
+        background-image: url('../../assets/doubts_hover.svg');
+        color: #015965;
+        transition: .7s;
+        cursor: pointer;
+    }
+
+    .procedure {
+        background-image: url('../../assets/proceed.svg');
+        background-size: cover;
+        width: 416px;
+        height: 114px;
+        border: none;
+        font-size: 28px;
+        color: #eaeaea;
+        letter-spacing: 1px;
+        border-radius: 8px;
+        transition: .7s;
+    }
+
+    .procedure:hover {
+        background-image: url('../../assets/proceed_hover.svg');
+        color: #015965;
+        transition: .7s;
+        cursor: pointer;
     }
 }

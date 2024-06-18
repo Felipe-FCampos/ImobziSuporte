@@ -1,4 +1,68 @@
----Current Version v1.12.2
+---Current Version v3.0.2
+
+Added:
+- Loading
+
+Bugs fixed:
+- None
+
+---Last Version v3.0.1
+
+Added:
+- None
+
+Bugs fixed:
+- API route
+
+---Version v3.0.0
+
+Added:
+- New integrastion with Notion
+- New API made for integration with Notion
+
+Bugs fixed:
+- Slow return from API
+
+
+---Version v2.3.1
+
+Added:
+- Proportional days calculator
+- Support knowleadge
+- Start API integration with Notion
+
+Bugs fixed:
+- CORS problems No-Acess-Origin
+
+
+---Version v2.0.1
+
+Added:
+- None
+
+Bugs fixed:
+- CORS problems No-Acess-Origin
+
+
+---Version v2.0.0
+
+Added:
+- API Integration
+
+Bugs fixed:
+- None
+
+
+---Version v1.13.0
+
+Added:
+- First Test Calculator with API
+
+Bugs fixed:
+- None
+
+
+---Version v1.12.2
 
 Added: 
 - History page
@@ -7,13 +71,15 @@ Added:
 Bugs fixed:
 - Input selecteds
 
----Last Version v1.11.4
+
+--- Version v1.11.4
 
 Added:
 - None
 
 Bugs fixed:
 - Radio buttons
+
 
 ---Version v1.11.3
 
@@ -24,6 +90,7 @@ Bugs fixed:
 - Buttons ticket and days were returning nothing, now they return an alert saying "wait for updates".
 
 Note: those updates (buttons ticket and days) will be made in the future.
+
 
 ---Version v1.11.2
 

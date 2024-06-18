@@ -9,6 +9,10 @@ export class ApiService {
 
   name!: string;
 
+<<<<<<< HEAD
+=======
+  // private apiUrl = 'https://imobzisuporteapi.onrender.com/'
+>>>>>>> main
   private apiUrl = 'http://127.0.0.1:8000/'
 
   constructor(private http: HttpClient) { }
@@ -35,6 +39,21 @@ export class ApiService {
     return this.http.post<ApiResponse>(`${this.apiUrl}somar`, body);
   }
 
+<<<<<<< HEAD
+=======
+  sendItemsDiasProp(
+    rent: number,
+    day: number,
+    dueDay: number
+  ){
+    const body = {
+      rent, day, dueDay
+    }
+
+    return this.http.post<ApiResponse>(`${this.apiUrl}diasproporcionais`, body);
+  }
+
+>>>>>>> main
   getNames(){
     return this.http.get<ApiResponse>(`${this.apiUrl}nomes`);
   }
