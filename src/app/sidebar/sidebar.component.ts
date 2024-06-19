@@ -1,25 +1,27 @@
-import { Component, ViewContainerRef } from '@angular/core';
+import { Component, OnInit, ViewContainerRef } from '@angular/core';
 import { SidebarService } from '../sidebar.service';
 import { UserService } from '../user.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-sidebar',
   templateUrl: './sidebar.component.html',
-  styleUrls: ['./sidebar.component.scss']
+  styleUrls: ['./sidebar.component.scss', './sidebar.component.desktop.scss']
 })
-export class SidebarComponent {
+export class SidebarComponent implements OnInit {
 
-  userName: string | null | undefined;
+  isHome: boolean = false;
+  isCalc: boolean = false;
+  istask: boolean = false;
+  isKnow: boolean = false;
 
-  constructor(private sidebarService: SidebarService, private userService: UserService){ 
-    this.userName = this.userService.getUserName();
-  }
 
-  closeSideBar(){
-    this.sidebarService.hideSideBar();
-  }
+  constructor(private sidebarService: SidebarService, private userService: UserService, private router: Router){ }
 
-  waitForUpdate(){
-    alert('Em breve mais atualizações!');
+  ngOnInit(): void {
+    this.isHome = this.router.url == '/home';
+    this.isCalc = this.router.url == '/irrf' || this.router.url == '/proportional-days';
+    this.istask = this.router.url == '/task';
+    this.isKnow = this.router.url == '/frequently-doubts';
   }
 }

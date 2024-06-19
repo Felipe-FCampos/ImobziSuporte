@@ -1,18 +1,7 @@
-#logo_colorida_desktop {
-    display: none;
-}
-
 ._body {
     display: flex;
     flex-direction: column;
     margin-top: 16px;
-}
-
-._body hr {
-    background-color: #0194A6;
-    width: 288px;
-    margin-top: 4px;
-    margin-bottom: 16px;
 }
 
 ._body .title h1 {
@@ -39,76 +28,4 @@
 
 ._content_desktop {
     display: none;
-}
-
-.subtitle {
-    display: flex;
-    justify-content: center;
-}
-
-.subtitle h1 {
-    font-family: 'Helvetica', sans-serif;
-    font-weight: 500;
-    font-size: 16px;
-    color: #0194A6;
-    margin-bottom: 16px;
-}
-
-.help_title {
-    display: flex;
-    justify-content: center;
-}
-
-.help_title h1 {
-    font-family: 'Helvetica', sans-serif;
-    font-weight: 500;
-    font-size: 16px;
-    color: #0194A6;
-    margin-bottom: 16px;
-}
-
-.image_home_screen {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 32px;
-    margin-inline: 0px;
-}
-
-.image_home_screen img {
-    width: 294px;
-    height: 156px;
-}
-
-.image_home_screen #_banner {
-    width: 450px;
-}
-
-.option {
-    display: flex;
-    justify-content: center;
-}
-
-#calcularIrrf {
-    width: 288px;
-    height: 51px;
-    border-radius: 8px;
-    border: none;
-    background-color: #0194A6;
-    color: #f3f3f3;
-    font-size: 18px;
-}
-
-#acessarFaq {
-    width: 288px;
-    height: 51px;
-    border-radius: 8px;
-    border: none;
-    background-color: #0194A6;
-    color: #f3f3f3;
-    font-size: 18px;
-}
-
-#acessarFaq a {
-    text-decoration: none;
-    color: #f3f3f3;
 }
