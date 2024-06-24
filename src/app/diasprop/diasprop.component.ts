@@ -53,8 +53,6 @@ export class DiaspropComponent implements OnInit {
     let day = this.selectedDay();
     let rent = document.getElementById('rentPropDay') as HTMLInputElement;
     let dueDate = document.getElementById('dynamicSelect') as HTMLSelectElement;
-    console.log('Data de vencimento:' + dueDate.value)
-    console.log('Dia selecionado:' + day)
 
     this.propDay = day || 0;
     this.dueDay = parseFloat(dueDate.value);
@@ -63,7 +61,6 @@ export class DiaspropComponent implements OnInit {
     if(day && rent && dueDate){
     this.apiService.sendItemsDiasProp(this.rentPropDay, this.propDay, this.dueDay).subscribe(items => {
       this.resultPropDays = items.resultPropDays;
-      console.log(this.resultPropDays)
 
       let element_rent = document.getElementById('rentPropDay') as HTMLElement;
       element_rent.style.border = 'none';

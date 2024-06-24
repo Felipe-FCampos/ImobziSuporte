@@ -1,76 +1,33 @@
 <main>
-    <section class="_head">
-        <img id="list" src="../../assets/list_colored.svg" alt="" (click)="openSideBar()">
-        <img id="logo_colorida" src="../../assets/logo_colorida.svg" alt="">
-        <div class="navigation">
-            <nav>
-                <a routerLink="/home" id="menuLink">Home</a>
-                <a routerLink="/history" id="menuLink">Histórico</a>
-                <a href="" id="menuLink">Perfil</a>
-            </nav>
-        </div>
-        <div id="space"></div>
-    </section>
-    <hr>
-    <section class="_body">
-        <div class="title">
-            <h1>Seja Bem-vindo, <b>{{ userName }}</b></h1>
-            <h2>{{ dataCorreta }}</h2>
-        </div>
-
-        <section class="_content">
-            <div class="image_home_screen">
-
-                <img id="_banner" src="../../assets/banner.svg" alt="">
-            </div>
-            <div class="_options_">
-                <div class="subtitle">
-                    <h1>Calcule</h1>
-                </div>
-                <div class="option">
-                    <button id="calcularIrrf" routerLink="/irrf">IRRF</button>
-                </div>
-            </div>
-            <div class="_help">
-                <div class="help_title">
-                    <h1>Dúvidas?</h1>
-                </div>
-                <div class="option">
-                    <a
-                        href="https://help.imobzi.com/pt-br/article/como-e-realizado-o-calculo-de-irrf-automaticamente-453oka/"><button
-                            id="acessarFaq">FAQ</button></a>
-                </div>
-            </div>
+    <section class="homePage">
+        <section class="_head">
+            <div class="top_header_space"></div>
+            <app-sidebar></app-sidebar>
         </section>
-
-        <section class="_content_desktop">
-            <div class="calculator">
-                <div class="title_desktop">
-                    <h1>Calculadora</h1>
-                </div>
-                <div class="calculatorOptions">
-                    <button class="irrfButton" routerLink="/irrf">IRRF</button>
-                    <button class="multaButton" (click)="waitForUpdate()">Multas & Juros</button>
-                    <button class="propButton" routerLink="/proportional-days">Dias proporcionais</button>
-                </div>
+        <section class="_body">
+            <div class="title">
+                <h1>Seja Bem-vindo, <b>{{ userName }}</b></h1>
             </div>
-            <div class="tasks">
-                <div class="title_desktop">
-                    <h1>Gerenciador de tarefas</h1>
+    
+            <section class="_content_desktop">
+                <div class="_calculator_history">
+                    <app-calculator-history></app-calculator-history>
+                <!--<div class="title_desktop">
+                        <h1>Calculadora</h1>
+                    </div>
+                    <div class="calculatorOptions">
+                        <button class="irrfButton" routerLink="/irrf">IRRF</button>
+                        <button class="multaButton" (click)="waitForUpdate()">Multas & Juros</button>
+                        <button class="propButton" routerLink="/proportional-days">Dias proporcionais</button>
+                    </div> -->
                 </div>
-                <div class="tasksOptions">
-                    <button class="createTaskButton">Criar tarefa</button>
-                    <button class="seeTaskButton" (click)="waitForUpdate()">Ver tarefas</button>
+                <div class="table">
+                    <app-irrf-table></app-irrf-table>
                 </div>
-            </div>
-            <div class="knowleadge">
-                <div class="title_desktop">
-                    <h1>Conhecimento do Suporte</h1>
+                <div class="knowleadge">
+                    <app-doc-history></app-doc-history>
                 </div>
-                <div class="knowledgeOptions">
-                    <button class="doubts" routerLink="/frequently-doubts">Dúvidas frequentes</button>
-                </div>
-            </div>
+            </section>
         </section>
     </section>
 </main>

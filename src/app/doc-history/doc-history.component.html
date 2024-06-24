@@ -1,0 +1,7 @@
+<main>
+    <h1>Último documento acessado</h1>
+    <div class="_content" [routerLink]="['/frequently-doubts/doubts', doc.id]">
+        <h2>{{ doc.name }}</h2>
+        <p>{{ doc.content[0].text }}</p>
+    </div>
+</main>

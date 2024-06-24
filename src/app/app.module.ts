@@ -19,6 +19,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { DiaspropComponent } from './diasprop/diasprop.component';
 import { DoubtsComponent } from './doubts/doubts.component';
 import { DuvidaComponent } from './duvida/duvida.component';
+import { CalculatorHistoryComponent } from './calculator-history/calculator-history.component';
+import { IrrfTableComponent } from './irrf-table/irrf-table.component';
+import { DocHistoryComponent } from './doc-history/doc-history.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +35,10 @@ import { DuvidaComponent } from './duvida/duvida.component';
     MultasejurosComponent,
     DiaspropComponent,
     DoubtsComponent,
-    DuvidaComponent
+    DuvidaComponent,
+    CalculatorHistoryComponent,
+    IrrfTableComponent,
+    DocHistoryComponent
   ],
   imports: [
     BrowserModule,

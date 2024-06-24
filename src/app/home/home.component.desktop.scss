@@ -1,106 +1,64 @@
 @media(min-width: 576px) {
 
+    main {
+        position: absolute;
+        margin-left: -8px;
+        height: 110vh;
+        width: 100%;
+        background-color: #EDF2F5;
+    }
+
+    .homePage {
+        display: flex;        
+    }
+
+    ._calculator_history {
+        margin-left: 24px;
+    }
+
+    .table {
+        margin-top: 16px;
+    }
+
+    ._head {
+        margin-top: 32px;
+    }
+
+    .top_header_space {
+        position: fixed;
+        top: 0%;
+        left: 0%;
+        z-index: 100;
+        width: 100%;
+        height: 64px;
+        background-color: #fff;
+    }
+
     ._content {
         display: none;
     } 
 
     ._content_desktop {
         display: block;
-        margin-top: -16px;
+        margin-top: 24px;
     }
 
-    #list {
-        display: none;
-    }
-
-    #menuLink {
-        position: relative;
-        color: #0092A5;
-        /* Cor do texto */
-        text-decoration: none;
-        /* Remover o sublinhado padrão do link */
-    }
-
-    #menuLink::before {
-        content: '';
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        width: 0;
-        height: 2px;
-        background-color: #0092A5;
-        /* Cor da linha */
-        transition: width 0.3s ease;
-        /* Transição suave da largura */
-    }
-
-    #menuLink:hover::before {
-        width: 100%;
-        /* Largura da linha ao passar o mouse */
-    }
-
-    #space {
-        display: none;
+    ._body {
+        margin-top: 48px;
+        margin-left: 232px;
+        z-index: 1;
     }
 
     ._body .title h1 {
-        font-size: 20px;
+        font-size: 24px;
+        font-weight: 300;
     }
     
     ._body .title h2 {
         font-size: 20px;
     }
 
-    ._body hr {
-        width: 84rem;
-        height: 1px;
-        display: flex;
-        justify-content: center;
-        background-color: #0092A5;
-        border-radius: 50%;
-    }
-
-    .image_home_screen {
-        display: flex;
-        margin: 0px;
-    }
-
-    .image_home_screen img {
-        width: 394px;
-        height: 256px;
-    }
-
-    .subtitle h1 {
-        font-size: 24px;
-    }
-
-    .help_title h1 {
-        font-size: 24px;
-    }
-
-    #calcularIrrf {
-        width: 24rem;
-        height: 51px;
-        border-radius: 8px;
-        border: none;
-        background-color: #0194A6;
-        color: #f3f3f3;
-        letter-spacing: 2px;
-    }
-
-    #acessarFaq {
-        width: 24rem;
-        height: 51px;
-        border-radius: 8px;
-        border: none;
-        background-color: #0194A6;
-        color: #f3f3f3;
-    }
-
-    #calcularIrrf:hover,
-    #acessarFaq:hover {
-        cursor: pointer;
-        background-color: #02DEDA;
-        transition: .2s;
+    ._body .title b {
+        font-weight: 500;
     }
 }

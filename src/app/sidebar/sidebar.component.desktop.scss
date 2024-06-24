@@ -1,0 +1,160 @@
+@media(min-width: 576px){
+    main {
+        position: fixed;
+        z-index: 1000;
+        left: -1%;
+        display: flex;
+        background-color: #fff;
+        width: 200px;
+        height: 85%;
+        box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+        border-radius: 0px 24px 24px 0px;
+    }
+
+    #sideBar {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+
+    #sideBar h1, button {
+        background: none;
+        border: none;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 500;
+        color: #0092A5;
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+        width: 232px;
+    }
+
+    #sideBar img {
+        margin-right: 16px;
+    }
+
+    #logo_imobzi {
+        width: 75%;
+        height: 75%;
+    }
+
+    .buttons {
+        margin-top: 28px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .settings {
+        position: fixed;
+        top: 86%;
+        z-index: 1000;
+    }
+
+    #home_clicked, #home_clicked h1,
+    #calculator_clicked, #calculator_clicked h1,
+    #tasks_clicked, #tasks_clicked h1,
+    #know_clicked, #know_clicked h1 {
+        background-color: #0092A5;
+        color: #fff;
+        width: 232px;
+        margin-left: -12px;
+        padding-left: 16px;
+        transition: .2s;
+    }
+
+    button:hover {
+        background-color: #00000012;
+        margin-left: -12px;
+        padding-left: 16px;
+        transition: .2s;
+        cursor: pointer;
+    }
+
+    #options {
+        display: none;
+        margin-left: -12px;
+        margin-right: -4px;
+    }
+
+    #options button {
+        text-align: start;
+        padding-left: 32px;
+        background-color: #f9f9f9;
+        padding-block: 16px;
+        transition: .2s;
+        
+    }
+
+    #options button:hover {
+        background-color: #00000012;
+        margin-left: 2px;
+        padding-left: 36px;
+        transition: .2s;
+        cursor: pointer;
+    }
+
+    #button_calc_up {
+        rotate: 180deg;
+    }
+
+    .user {
+        position: fixed;
+        top: 1.5%;
+        right: 1.5%;
+        z-index: 100;
+    }
+
+    .user:hover {
+        cursor: pointer;
+        filter:grayscale(10%)
+    }
+
+    .user img {
+        width: 42px;
+        height: 42px;
+    }
+
+    .userMenu {
+        display: none;
+        flex-direction: column;
+        width: 150px;
+        position: fixed;
+        top: 8.5%;
+        right: -1%;
+        background-color: #fff;
+        z-index: 100;
+        padding-left: 16px;
+        border-radius: 4px;
+        box-shadow: 1px 1px 5px #0000008d;
+    }
+
+    .userMenu button {
+        height: 32px;
+        transition: .2s;
+    }
+
+    .userMenu h1 {
+        color: #9D9D9D;
+        font-weight: 300;
+    }
+
+    .userMenu img {
+        filter: grayscale(1);
+        width: 24px;
+        height: 24px;
+        margin-left: -8px;
+        margin-right: 8px;
+    }
+
+    .userMenu button:hover {
+        background-color: #00000009;
+        margin-left: -16px;
+        width: 100%;
+    }
+
+    .userMenu hr {
+        margin-left: -16px;
+        margin-block: -2px;
+    }
+}

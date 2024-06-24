@@ -19,6 +19,7 @@ export class DuvidaComponent implements OnInit {
   ) {}
   
   ngOnInit(): void {
+
     let element = document.querySelector('.loading') as HTMLElement;
     element.style.display = 'flex';
 

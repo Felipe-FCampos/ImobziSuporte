@@ -4,7 +4,7 @@ import { DocumentsService } from '../documents.service';
 @Component({
   selector: 'app-doubts',
   templateUrl: './doubts.component.html',
-  styleUrls: ['../app.component.scss', './doubts.component.scss', './doubts.component.desktop.scss']
+  styleUrls: ['../app.component.scss', './doubts.component.scss', './doubts.component.desktop.scss', '../home/home.component.desktop.scss']
 })
 export class DoubtsComponent implements OnInit {
   documents: any[] = [];
@@ -68,9 +68,5 @@ export class DoubtsComponent implements OnInit {
 
   formatContent(content: any[], maxChars: number): string {
     return content.slice(0, 2).map(c => c.text).join(' ').slice(0, maxChars) + (content.length > maxChars ? '...' : '...');
-  }
-
-  formatCategory(category: any[]){
-    
   }
 }

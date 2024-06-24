@@ -7,7 +7,8 @@ import { Observable, map, tap } from 'rxjs';
 })
 export class DocumentsService {
 
-  private apiUrlDocs = 'https://apinotionintegrationsup.onrender.com/';
+  // private apiUrlDocs = 'https://apinotionintegrationsup.onrender.com/';
+  private apiUrlDocs = 'http://127.0.0.1:8000/'
   private localStorageKey = 'documentsData'
 
   

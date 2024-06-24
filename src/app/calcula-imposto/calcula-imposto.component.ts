@@ -89,6 +89,7 @@ export class CalculaImpostoComponent {
       this.opcao = this.add
       this.opcaoAdmFee = this.add
 
+      this.getLastNumber(this.resultado)
       this.saveCalculatorValue(this.resultado);
 
       let element = document.querySelector('.loading') as HTMLElement;

@@ -1,1 +1,26 @@
-<p>user works!</p>
+<main>
+
+    <div class="top_header_space"></div>
+    <section class="_head">
+        <app-sidebar></app-sidebar>
+    </section>
+    <section class="_content">
+        <div class="profile_pic">
+            <img src="../../assets/user_none.svg" alt="">
+        </div>
+        <div class="information">
+            <div class="name">
+                <h1>Nome:</h1>
+                <h2>{{ userName }}</h2>
+            </div>
+            <div class="email">
+                <h1>E-mail:</h1>
+                <h2>{{ userEmail }}</h2>
+            </div>
+            <div class="number">
+                <h1>Número:</h1>
+                <h2>{{ userNumber }}</h2>
+            </div>
+        </div>
+    </section>
+</main>
