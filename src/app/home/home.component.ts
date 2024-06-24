@@ -2,12 +2,13 @@ import { Component, ViewContainerRef } from '@angular/core';
 import { UserService } from '../user.service';
 import { SidebarComponent } from '../sidebar/sidebar.component';
 import { SidebarService } from '../sidebar.service';
+import { HistoryService } from '../history.service';
 
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['../app.component.scss', './home.component.scss', './home.component.desktop.scss', './home_second.component.desktop.scss'],
+  styleUrls: ['./home.component.scss', './home.component.desktop.scss', './home_second.component.desktop.scss'],
 })
 export class HomeComponent {
 
@@ -28,9 +29,12 @@ export class HomeComponent {
 
   userName: string | null;
 
-  constructor(private userService: UserService, private sidebarService: SidebarService, private viewContainerRef: ViewContainerRef){
+  constructor(
+    private userService: UserService, 
+    private sidebarService: SidebarService, 
+    private viewContainerRef: ViewContainerRef,
+    private historyService: HistoryService){
     this.userName = this.userService.getUserName();
-    console.log(this.day);
   }
 
   openSideBar(){

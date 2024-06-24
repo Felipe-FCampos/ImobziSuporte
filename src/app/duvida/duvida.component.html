@@ -19,7 +19,7 @@
     <section class="doc_content">
         <div class="_title">
             <img src="../../assets/back.svg" alt="" routerLink="/frequently-doubts">
-            <h1>{{ document?.name }}</h1>
+            <h1>{{ document?.name.slice(0, -1).join(' ') + document?.name[document?.name.length - 1].replace(',', '') }}</h1>
             <div class="space"></div>
         </div>
         <div class="_content" *ngFor="let item of document?.content">
@@ -27,6 +27,9 @@
                 {{ item.text }}
             </p>
             <img *ngIf="item.image_url" [src]="item.image_url" alt="Image">
+            <p>
+                {{ item.URL }}
+            </p>
         </div>
     </section>
 </main>

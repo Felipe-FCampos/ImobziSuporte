@@ -20,6 +20,8 @@ import { DiaspropComponent } from './diasprop/diasprop.component';
 import { DoubtsComponent } from './doubts/doubts.component';
 import { DuvidaComponent } from './duvida/duvida.component';
 import { CalculatorHistoryComponent } from './calculator-history/calculator-history.component';
+import { IrrfTableComponent } from './irrf-table/irrf-table.component';
+import { DocHistoryComponent } from './doc-history/doc-history.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +36,9 @@ import { CalculatorHistoryComponent } from './calculator-history/calculator-hist
     DiaspropComponent,
     DoubtsComponent,
     DuvidaComponent,
-    CalculatorHistoryComponent
+    CalculatorHistoryComponent,
+    IrrfTableComponent,
+    DocHistoryComponent
   ],
   imports: [
     BrowserModule,

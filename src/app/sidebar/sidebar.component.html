@@ -1,11 +1,26 @@
 <main>
+    <section class="user">
+        <img src="../../assets/user_none.svg" alt="" (click)="openUserMenu()">
+    </section>
+    <section id="userMenu" class="userMenu">
+        <button routerLink="/profile">
+            <img src="../../assets/user_none.svg" alt="">
+            <h1>Perfil</h1>
+        </button>
+        <button routerLink="/">
+            <img src="../../assets/logout.svg" alt="">
+            <h1>Sair</h1>
+        </button>
+    </section>
     <section id="sideBar">
-        <img id="logo_imobzi" src="../../assets/logo_imobzi.svg" alt="">
+        <div class="logo">
+            <img id="logo_imobzi" src="../../assets/logo_imobzi.svg" alt="">
+        </div>
         <div class="buttons">
 
 <!-- Botoes de home -->
 
-            <button id="home" [ngStyle]="{ display: isHome ? 'none' : 'flex'}">
+            <button id="home" [ngStyle]="{ display: isHome ? 'none' : 'flex'}" routerLink="/home">
                 <img src="../../assets/home.svg" alt="">
                 <h1>Home</h1>
             </button>            
@@ -16,35 +31,43 @@
 
 <!-- Botoes de Calculadora -->
 
-            <button id="calculator" [ngStyle]="{ display: isCalc ? 'none' : 'flex'}">
+            <button id="calculator" [ngStyle]="{ display: isCalc ? 'none' : 'flex'}" (click)="changeURL()">
                 <img src="../../assets/calculator.svg" alt="">
                 <h1>Calculadora</h1>
+                <img id="button_arrow" src="../../assets/arrow_blue.svg" alt="">
             </button>
-            <button id="calculator_clicked" [ngStyle]="{ display: isCalc ? 'flex' : 'none'}">
+            <button id="calculator_clicked" [ngStyle]="{ display: isCalc ? 'flex' : 'none'}" (click)="options()">
                 <img src="../../assets/calculator_hover.svg" alt="">
                 <h1>Calculadora</h1>
+                <img id="button_calc_up" src="../../assets/arrow_white.svg" alt="">
             </button>
+
+            <div id="options" [ngStyle]="{ display: isCalc ? 'block' : 'none'}">
+                <button routerLink="/calculator/irrf" [ngStyle]="{ display: isCalc ? 'block' : 'none'}">IRRF</button>
+                <!-- <button [ngStyle]="{ display: isCalc ? 'block' : 'none'}">Multas & Juros</button> -->
+                <button routerLink="/calculator/proportional-days" [ngStyle]="{ display: isCalc ? 'block' : 'none'}">Dias proporcionais</button>
+            </div>
 
 <!-- Botoes de Tarefas -->
 
-            <button id="tasks" [ngStyle]="{ display: istask ? 'none' : 'flex'}">
+            <!-- <button id="tasks" [ngStyle]="{ display: istask ? 'none' : 'flex'}">
                 <img src="../../assets/calendar.svg" alt="">
                 <h1>Tarefa</h1>
             </button>
             <button id="tasks_clicked" [ngStyle]="{ display: istask ? 'flex' : 'none'}">
                 <img src="../../assets/calendar_hover.svg" alt="">
                 <h1>Tarefa</h1>
-            </button>
+            </button> -->
 
 <!-- Botoes de Conhecimento -->
 
-            <button id="know" [ngStyle]="{ display: isKnow ? 'none' : 'flex'}">
-                <img src="../../assets/calendar.svg" alt="">
-                <h1>Conhecimento</h1>
+            <button id="know" [ngStyle]="{ display: isKnow ? 'none' : 'flex'}" routerLink="/frequently-doubts">
+                <img src="../../assets/book_menu.svg" alt="">
+                <h1>Documentação</h1>
             </button>
             <button id="know_clicked" [ngStyle]="{ display: isKnow ? 'flex' : 'none'}">
-                <img src="../../assets/calendar_hover.svg" alt="">
-                <h1>Conhecimento</h1>
+                <img src="../../assets/book_clicked.svg" alt="">
+                <h1>Documentação</h1>
             </button>
         </div>
         <div class="settings">

@@ -8,6 +8,7 @@ import { HistoryComponent } from './history/history.component';
 import { DiaspropComponent } from './diasprop/diasprop.component';
 import { DoubtsComponent } from './doubts/doubts.component';
 import { DuvidaComponent } from './duvida/duvida.component';
+import { UserComponent } from './user/user.component';
 
 const routes: Routes = [
 
@@ -20,7 +21,11 @@ const routes: Routes = [
     component: HomeComponent,
   },
   {
-    path:'irrf',
+    path:'calculator',
+    component: HomeComponent,
+  },
+  {
+    path:'calculator/irrf',
     component: CalculaImpostoComponent,
   },
   {
@@ -28,7 +33,7 @@ const routes: Routes = [
     component: HistoryComponent,
   },
   {
-    path:'proportional-days',
+    path:'calculator/proportional-days',
     component: DiaspropComponent,
   },
   {
@@ -38,6 +43,10 @@ const routes: Routes = [
   {
     path:'frequently-doubts/doubts/:id',
     component: DuvidaComponent
+  },
+  {
+    path:'profile',
+    component: UserComponent
   }
 ];
 

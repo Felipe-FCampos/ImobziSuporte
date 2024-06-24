@@ -21,22 +21,11 @@
                         <button class="propButton" routerLink="/proportional-days">Dias proporcionais</button>
                     </div> -->
                 </div>
-                <div class="tasks">
-                    <div class="title_desktop">
-                        <h1>Gerenciador de tarefas</h1>
-                    </div>
-                    <div class="tasksOptions">
-                        <button class="createTaskButton">Criar tarefa</button>
-                        <button class="seeTaskButton" (click)="waitForUpdate()">Ver tarefas</button>
-                    </div>
+                <div class="table">
+                    <app-irrf-table></app-irrf-table>
                 </div>
                 <div class="knowleadge">
-                    <div class="title_desktop">
-                        <h1>Conhecimento do Suporte</h1>
-                    </div>
-                    <div class="knowledgeOptions">
-                        <button class="doubts" routerLink="/frequently-doubts">Dúvidas frequentes</button>
-                    </div>
+                    <app-doc-history></app-doc-history>
                 </div>
             </section>
         </section>

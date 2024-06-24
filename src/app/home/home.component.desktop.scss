@@ -2,8 +2,8 @@
 
     main {
         position: absolute;
-        top: 0%;
         margin-left: -8px;
+        height: 110vh;
         width: 100%;
         background-color: #EDF2F5;
     }
@@ -12,27 +12,26 @@
         display: flex;        
     }
 
-    app-sidebar {
-        z-index: 1;
-    }
-
     ._calculator_history {
         margin-left: 24px;
     }
 
-    .top_header_space {
-        position: absolute;
-        top: 0%;
-        left: 0%;
-        z-index: 1;
-        width: 100%;
-        height: 64px;
-        background-color: #fff;
+    .table {
+        margin-top: 16px;
     }
 
     ._head {
-        margin-left: -8px;
-        background-color: #EDF2F5;
+        margin-top: 32px;
+    }
+
+    .top_header_space {
+        position: fixed;
+        top: 0%;
+        left: 0%;
+        z-index: 100;
+        width: 100%;
+        height: 64px;
+        background-color: #fff;
     }
 
     ._content {
@@ -45,7 +44,8 @@
     }
 
     ._body {
-        margin-top: 64px;
+        margin-top: 48px;
+        margin-left: 232px;
         z-index: 1;
     }
 
