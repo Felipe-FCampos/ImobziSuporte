@@ -32,6 +32,10 @@ export class SidebarComponent implements OnInit {
     window.location.href = '/calculator';
   }
 
+  update(){
+    alert('Em breve mais atualizações!')
+  }
+
   options(){
     if(this.verify == false){
     
