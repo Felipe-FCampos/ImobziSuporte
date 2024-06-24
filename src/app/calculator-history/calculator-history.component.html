@@ -7,7 +7,7 @@
             </div>
             <div class="info">
                 <h1>IRRF</h1>
-                <h2>R$ {{ lastCalc ? lastCalc : '0,00' }}</h2>
+                <h2>R$ {{ lastCalc ? lastCalc : '0,00' | number: '.2' }}</h2>
             </div>
         </div>
         <div class="multas">
