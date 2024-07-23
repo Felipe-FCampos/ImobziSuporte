@@ -35,11 +35,12 @@ export class LoginComponent {
     this.onReady(this.start.bind(this));
   }
 
-  validateName() {
-    let userNameInput = document.getElementById('name') as HTMLInputElement;
+  validateData() {
+    let userNameInput = document.getElementById('user') as HTMLInputElement;
+    let userEmailInput = document.getElementById('email') as HTMLInputElement;
     let userConfirmed: boolean;
 
-    if (userNameInput.value) {
+    if (userNameInput.value && userEmailInput.value) {
       userConfirmed = true;
     } else {
       userConfirmed = false;
@@ -54,8 +55,10 @@ export class LoginComponent {
       element.style.display = 'none';
 
     } else {
-      userNameInput.style.border = '2px solid #ff5050';
+      userNameInput.style.border = '1px solid #ff5050';
       userNameInput.placeholder = 'Nome inválido';
+      userEmailInput.style.border = '1px solid #ff5050';
+      userEmailInput.placeholder = 'Email inválido';
     }
   }
 }

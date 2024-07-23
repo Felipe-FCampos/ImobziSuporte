@@ -1,18 +1,40 @@
 <main id="main">
-    <div id="loading_screen">
-      <img id="logo" src="../assets/logoImobzi.svg" alt="">
-      <img id="loading_screen_logo_desktop" src="../../assets/logo_colorida.svg" alt="">
-    </div>
-    <div class="inputName">
-      <span class="inputLogo">
-        <img id="login_logo" src="../assets/logoImobzi.svg" alt="">
-      </span>
-      <span class="inputLogoDesktop">
-        <img id="logo_desktop" src="../../assets/logo_colorida.svg" alt="">
-      </span>
-      <span class="inputText">
-        <input id="name" type="text" placeholder="Digite seu nome">
-        <button id="access" (click)="validateName()" >Acessar</button>
-      </span>
-    </div>
+  <div id="loading_screen">
+    <img id="logo" src="../assets/logoImobzi.svg" alt="">
+    <img id="loading_screen_logo_desktop" src="../../assets/logo_colorida.svg" alt="">
+  </div>
+  <div class="inputName">
+    <span class="inputLogo">
+      <img id="login_logo" src="../assets/logoImobzi.svg" alt="">
+    </span>
+    <span class="inputLogoDesktop">
+      <img id="logo_desktop" src="../../assets/logo_colorida.svg" alt="">
+    </span>
+    <span class="inputText">
+      <div class="inputLogin">
+        <input id="email" type="email" placeholder="E-mail">
+        <input id="password" type="password" placeholder="Senha">
+      </div>
+
+      <div class="inputSign" style="display: none;">
+        <label for="">Digite seu usuário:</label>
+        <input id="user" type="text" placeholder="Usuário">
+        <label for="">Digite seu e-mail:</label>
+        <input id="email" type="email" placeholder="E-mail">
+        <label for="">Digite sua senha:</label>
+        <input id="password" type="password" placeholder="Senha">
+        <label for="">Confirme sua senha:</label>
+        <input id="passwordConfirm" type="password" placeholder="Senha">
+      </div>
+
+      <a class="forgetPassword" href="">Esqueceu a senha?</a>
+      <div class="access">
+        <button id="access" (click)="validateData()">Acessar</button>
+      </div>
+
+      <div class="createAccount">
+        <p>Não tem uma conta? <a href="">Crie uma</a></p>
+      </div>
+    </span>
+  </div>
 </main>

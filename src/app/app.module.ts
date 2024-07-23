@@ -22,6 +22,7 @@ import { DuvidaComponent } from './duvida/duvida.component';
 import { CalculatorHistoryComponent } from './calculator-history/calculator-history.component';
 import { IrrfTableComponent } from './irrf-table/irrf-table.component';
 import { DocHistoryComponent } from './doc-history/doc-history.component';
+import { TaskComponent } from './task/task.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { DocHistoryComponent } from './doc-history/doc-history.component';
     DuvidaComponent,
     CalculatorHistoryComponent,
     IrrfTableComponent,
-    DocHistoryComponent
+    DocHistoryComponent,
+    TaskComponent
   ],
   imports: [
     BrowserModule,
