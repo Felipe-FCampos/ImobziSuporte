@@ -1,4 +1,12 @@
----Current Version v3.2.3
+---Current Version v4.0.0
+
+Added:
+- Penalty calculator
+
+Bugs fixed:
+- None
+
+---last Version v3.2.3
 
 Added:
 - Changes on the login page
@@ -6,7 +14,7 @@ Added:
 Bugs fixed:
 - None
 
----Last Version v3.1.3
+---Version v3.1.3
 
 Added:
 - Rebuild

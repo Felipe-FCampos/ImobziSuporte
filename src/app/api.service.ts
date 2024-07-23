@@ -48,6 +48,18 @@ export class ApiService {
     return this.http.post<ApiResponse>(`${this.apiUrl}diasproporcionais`, body);
   }
 
+  sendItemsPenalty(
+    rent: number,
+    qtdDays: number,
+    fee: number,
+  ){
+    const body = {
+      rent, qtdDays, fee
+    }
+
+    return this.http.post<ApiResponse>(`${this.apiUrl}rentpenalty`, body);
+  }
+
   getNames(){
     return this.http.get<ApiResponse>(`${this.apiUrl}nomes`);
   }

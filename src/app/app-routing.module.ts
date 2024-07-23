@@ -9,6 +9,7 @@ import { DiaspropComponent } from './diasprop/diasprop.component';
 import { DoubtsComponent } from './doubts/doubts.component';
 import { DuvidaComponent } from './duvida/duvida.component';
 import { UserComponent } from './user/user.component';
+import { MultasejurosComponent } from './multasejuros/multasejuros.component';
 
 const routes: Routes = [
 
@@ -35,6 +36,10 @@ const routes: Routes = [
   {
     path:'calculator/proportional-days',
     component: DiaspropComponent,
+  },
+  {
+    path:'calculator/rental-penalty',
+    component: MultasejurosComponent,
   },
   {
     path:'frequently-doubts',

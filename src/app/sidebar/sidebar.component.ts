@@ -23,7 +23,7 @@ export class SidebarComponent implements OnInit {
 
   ngOnInit(): void {
     this.isHome = this.router.url == '/home';
-    this.isCalc = this.router.url == '/calculator' || this.router.url == '/calculator/irrf' || this.router.url == '/calculator/proportional-days';
+    this.isCalc = this.router.url == '/calculator' || this.router.url == '/calculator/irrf' || this.router.url == '/calculator/proportional-days' || this.router.url == '/calculator/rental-penalty';
     this.istask = this.router.url == '/task';
     this.isKnow = this.router.url == '/frequently-doubts';
   }

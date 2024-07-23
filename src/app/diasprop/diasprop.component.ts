@@ -58,7 +58,7 @@ export class DiaspropComponent implements OnInit {
     this.dueDay = parseFloat(dueDate.value);
     this.rentPropDay = parseFloat(rent.value);
 
-    if(day && rent && dueDate){
+    if(day && rent.value && dueDate.value){
     this.apiService.sendItemsDiasProp(this.rentPropDay, this.propDay, this.dueDay).subscribe(items => {
       this.resultPropDays = items.resultPropDays;
 
@@ -72,7 +72,7 @@ export class DiaspropComponent implements OnInit {
       element.style.display = 'none';
     })
     } else {
-      alert('Preencha todos os campos necessários!');
+      
 
       let element_rent = document.getElementById('rentPropDay') as HTMLElement;
       element_rent.style.border = '0.1px solid red';
@@ -82,6 +82,11 @@ export class DiaspropComponent implements OnInit {
 
       let element = document.querySelector('.loading') as HTMLElement;
       element.style.display = 'none';
+
+      setTimeout(function(){
+        alert('Preencha todos os campos necessários!');
+      }, 150)
+
     }
   }
 

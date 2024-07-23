@@ -38,7 +38,7 @@ import { DocHistoryComponent } from './doc-history/doc-history.component';
     DuvidaComponent,
     CalculatorHistoryComponent,
     IrrfTableComponent,
-    DocHistoryComponent
+    DocHistoryComponent,
   ],
   imports: [
     BrowserModule,

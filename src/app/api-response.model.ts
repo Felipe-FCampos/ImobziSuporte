@@ -9,4 +9,5 @@ export interface ApiResponse {
     "resultado": number
     "add": string
     "resultPropDays": number
+    "finalRentValue": number
   }

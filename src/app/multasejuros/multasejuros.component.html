@@ -1,1 +1,53 @@
-<p>multasejuros works!</p>
+<main>
+    <div class="loading">
+        <div class="loader"></div>
+    </div>
+
+    <section>
+        <section class="_head">
+            <div class="top_header_space"></div>
+            <app-sidebar></app-sidebar>
+        </section>
+
+        <div class="pageTitle">
+            <h1>Multa & Juros</h1>
+        </div>
+
+        <section class="penalty_content">
+            <div class="penalty_calculator">
+                <div class="inputs">
+                    <div class="first_column">
+                        <div class="rent">
+                            <label for="">Valor do aluguel</label>
+                            <input type="text" placeholder="R$ 4000,00" id="rent">
+                        </div>
+        
+                        <div class="dueDate">
+                            <label for="">Data de vencimento</label>
+                            <input type="date" id="dueDate">
+                        </div>
+                    </div>
+                    <div class="second_column">
+    
+                    <div class="currentDate">
+                        <label for="">Data atual</label>
+                        <input type="date" id="currentDate">
+                    </div>
+                    
+                    <div class="fee">
+                        <label for="">Juros por mora</label>
+                        <input type="text" placeholder="0,033%" id="feePerDay">
+                    </div>
+                    </div>
+                </div>
+
+                <button id="penalty_button" (click)="calcularMulta()">Calcular</button>
+
+                <div class="result">
+                    <h1>Valor final do aluguel</h1>
+                    <span>{{ finalRentValue }}</span>
+                </div>
+            </div>
+        </section>
+    </section>
+</main>
