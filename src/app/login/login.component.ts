@@ -35,7 +35,7 @@ export class LoginComponent {
     this.onReady(this.start.bind(this));
   }
 
-  validateName() {
+  validateData() {
     let userNameInput = document.getElementById('name') as HTMLInputElement;
     let userConfirmed: boolean;
 
