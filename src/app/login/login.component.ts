@@ -14,7 +14,7 @@ export class LoginComponent {
         window.clearInterval(intervalId);
         callback.call(this);
       }
-    }, 1950);
+    }, 0 /*1950*/);
   };
 
   setVisible(selector: string, visible: boolean) {

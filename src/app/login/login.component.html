@@ -14,6 +14,12 @@
       <div class="inputLogin">
         <input id="email" type="email" placeholder="E-mail">
         <input id="password" type="password" placeholder="Senha">
+        <div class="proceed">
+          <a class="forgetPassword" href="">Esqueceu a senha?</a>
+          <div class="access">
+            <button id="access" (click)="validateData()">Acessar</button>
+          </div>
+        </div>
       </div>
 
       <div class="inputSign" style="display: none;">
@@ -25,11 +31,6 @@
         <input id="password" type="password" placeholder="Senha">
         <label for="">Confirme sua senha:</label>
         <input id="passwordConfirm" type="password" placeholder="Senha">
-      </div>
-
-      <a class="forgetPassword" href="">Esqueceu a senha?</a>
-      <div class="access">
-        <button id="access" (click)="validateData()">Acessar</button>
       </div>
 
       <div class="createAccount">
