@@ -1,4 +1,12 @@
----Current Version v4.0.0
+---Current Version v5.0.0
+
+Added:
+- Register and login functions
+
+Bugs fixed:
+- None
+
+---last Version v4.0.0
 
 Added:
 - Penalty calculator
@@ -6,7 +14,7 @@ Added:
 Bugs fixed:
 - None
 
----last Version v3.2.3
+---Version v3.2.3
 
 Added:
 - Changes on the login page

@@ -1,0 +1,81 @@
+@media(min-width: 576px){
+    main {
+        margin-left: -8px;
+        background-image: url("../../assets/background-full.jpeg");
+        background-position: center;
+        background-size: cover;
+        height: 100vh;
+    }
+
+    .inputLogo {
+        display: none;
+    }
+
+    .inputLogoDesktop {
+        padding-top: 15%;
+    }
+
+    .inputText {
+        padding-top: 5%;
+    }
+
+    .inputLogoDesktop img {
+        width: 80px;
+    }
+
+    .inputName, .inputText {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        background-color: #fff;
+        height: 100vh;
+        margin-inline: 25%;
+
+        .inputSign {
+            display: flex;
+            flex-direction: column;
+            text-align: start;
+            font-family: 'Roboto', sans-serif;
+        }
+    }
+
+    .register {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        width: 100%;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 300;        
+    }
+
+    .register button {
+        border: none;
+        height: 48px;
+        width: 100%;
+        background-color: #0092A5;
+        color: #eaeaea;
+        border-radius: 4px;
+        transition: .2s;
+        font-size: 16px;
+        font-weight: 200;
+    }
+
+    .register button:hover {
+        background-color: #02DEDA;
+        color: #0092A5;
+        cursor: pointer;
+        transition: .2s;
+    }
+
+    .haveAccount {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 300;
+        color: #0092A5;
+    }
+
+    .haveAccount a {
+        font-weight: 700;
+        text-decoration: none;
+        color: #0092A5;
+    }
+}

@@ -1,13 +1,22 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { UserService } from '../user.service';
+import { AngularFireAuth } from '@angular/fire/compat/auth';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.scss', './login.component.desktop.scss']
+  styleUrls: ['./login.component.scss', './login.component.desktop.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class LoginComponent {
+
+  user = {
+    uid: "",
+    email: "",
+    password: "",
+  }
+
   onReady = (callback: () => void) => {
     let intervalId = window.setInterval(() => {
       if ((document.getElementsByTagName('main')[0] !== undefined)) {
@@ -31,33 +40,47 @@ export class LoginComponent {
     this.setVisible('#loading_screen', false);
   });
 
-  constructor(private router: Router, private userService: UserService) {
+  constructor(private router: Router, private userService: UserService, private ngFireAuth: AngularFireAuth) {
     this.onReady(this.start.bind(this));
   }
 
-  validateData() {
-    let userNameInput = document.getElementById('name') as HTMLInputElement;
-    let userConfirmed: boolean;
+  async login() {
+    try {
+      const credential = await this.ngFireAuth.signInWithEmailAndPassword(this.user.email, this.user.password);
+      const userId = credential.user?.uid
 
-    if (userNameInput.value) {
-      userConfirmed = true;
-    } else {
-      userConfirmed = false;
+      if(credential.user?.email && userId){
+        this.user.uid = userId;
+        localStorage.setItem('UIDtoken', this.user.uid);
+        this.router.navigate(['/home']);
+      } else {
+        alert("E-mail ou senha inválidos! :(");
+      }
+
+    } catch (error) {
+      alert("Insira os dados corretamente.")
     }
+    // let userNameInput = document.getElementById('name') as HTMLInputElement;
+    // let userConfirmed: boolean;
 
-    if (userConfirmed == true) {
-      this.userService.setUserName(userNameInput.value);
+    // if (userNameInput.value) {
+    //   userConfirmed = true;
+    // } else {
+    //   userConfirmed = false;
+    // }
 
-      this.router.navigate(['/home']);
+    // if (userConfirmed == true) {
+    //   this.userService.setUserName(userNameInput.value);
 
-      let element = document.getElementById('main') as HTMLElement;
-      element.style.display = 'none';
+    //   this.router.navigate(['/home']);
 
-    } else {
-      userNameInput.style.border = '2px solid #ff5050';
-      userNameInput.placeholder = 'Nome inválido';
-    }
-  }
+    //   let element = document.getElementById('main') as HTMLElement;
+    //   element.style.display = 'none';
+
+    // } else {
+    //   userNameInput.style.border = '2px solid #ff5050';
+    //   userNameInput.placeholder = 'Nome inválido';
+    // }
 }
-
+}
 

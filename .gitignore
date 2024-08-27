@@ -1,3 +1,11 @@
 .angular
 
 *.pack
+
+node_modules/
+
+dist/
+
+# register/
+
+enviroment/

@@ -39,8 +39,8 @@
     }
 
     .inputLogoDesktop img {
-        width: 99px;
-        height: 101px;
+        width: 69px;
+        height: 71px;
     }
 
     .inputLogoDesktop {
@@ -69,7 +69,10 @@
     .inputText button {
         background-color: #0092A5;
         color: #eaeaea;
+        border-radius: 4px;
         transition: .2s;
+        font-size: 16px;
+        font-weight: 200;
     }
 
     .inputText button:hover {
@@ -142,5 +145,6 @@
     .createAccount a {
         font-weight: 700;
         text-decoration: none;
+        color: #0092A5;
     }
 }

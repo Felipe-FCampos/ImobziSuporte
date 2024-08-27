@@ -32,6 +32,10 @@ export class SidebarComponent implements OnInit {
     window.location.href = '/calculator';
   }
 
+  logout(){
+    localStorage.removeItem('UIDtoken')
+  }
+
   update(){
     alert('Em breve mais atualizações!')
   }

@@ -1,0 +1,49 @@
+<main id="main">
+    <div class="inputName">
+        <span class="inputLogo">
+            <img id="login_logo" src="../assets/logoImobzi.svg" alt="">
+        </span>
+        <span class="inputLogoDesktop">
+            <img id="logo_desktop" src="../../assets/logo_colorida.svg" alt="">
+        </span>
+        <span class="inputText">
+
+            <div class="inputSign">
+            <!-- Input user -->
+                <mat-form-field appearance="outline">
+                    <mat-label>Digite seu usuário:</mat-label>
+                    <input [(ngModel)]="user.userName" id="user" type="text" matInput placeholder="Usuário">
+                    <mat-icon matSuffix>person</mat-icon>
+                </mat-form-field>
+
+            <!-- Input e-mail -->
+                <mat-form-field appearance="outline">
+                    <mat-label>Digite seu e-mail:</mat-label>
+                    <input [(ngModel)]="user.email" id="email" type="email" matInput placeholder="E-mail">
+                    <mat-icon matSuffix>email</mat-icon>
+                </mat-form-field>
+
+            <!-- Input password -->
+            <mat-form-field appearance="outline">
+                <mat-label>Digite sua senha:</mat-label>
+                <input [(ngModel)]="user.password" id="password" type="password" matInput placeholder="Senha">
+                <mat-icon matSuffix>key</mat-icon>
+            </mat-form-field>
+
+        <!-- Input confirm password -->
+            <mat-form-field appearance="outline">
+                <mat-label>Confirme sua senha:</mat-label>
+                <input id="passwordConfirm" type="password" matInput placeholder="Senha">
+                <mat-icon matSuffix>key</mat-icon>
+            </mat-form-field>
+            </div>
+            <div class="register">
+                <button id="register" (click)="register()">Criar conta</button>
+            </div>
+
+            <div class="haveAccount">
+                <p>Já tem uma conta? <a routerLink="/">Acesse</a></p>
+            </div>
+        </span>
+    </div>
+</main>

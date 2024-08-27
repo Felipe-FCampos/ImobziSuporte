@@ -2,6 +2,10 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AngularFireModule } from '@angular/fire/compat';
 import { FormsModule } from '@angular/forms';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatIconModule } from '@angular/material/icon';
+import { MatInputModule } from '@angular/material/input';
+import { BrowserAnimationsModule, NoopAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -22,6 +26,8 @@ import { DuvidaComponent } from './duvida/duvida.component';
 import { CalculatorHistoryComponent } from './calculator-history/calculator-history.component';
 import { IrrfTableComponent } from './irrf-table/irrf-table.component';
 import { DocHistoryComponent } from './doc-history/doc-history.component';
+import { RegisterComponent } from './register/register.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +45,8 @@ import { DocHistoryComponent } from './doc-history/doc-history.component';
     CalculatorHistoryComponent,
     IrrfTableComponent,
     DocHistoryComponent,
+    RegisterComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -46,7 +54,12 @@ import { DocHistoryComponent } from './doc-history/doc-history.component';
     AngularFireModule.initializeApp(environment.firebase),
     CommonModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    MatFormFieldModule,
+    MatIconModule,
+    MatInputModule,
+    BrowserAnimationsModule
+    //NoopAnimationsModule,
   ],
   providers: [DecimalPipe],
   bootstrap: [AppComponent]

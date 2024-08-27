@@ -10,12 +10,17 @@ import { DoubtsComponent } from './doubts/doubts.component';
 import { DuvidaComponent } from './duvida/duvida.component';
 import { UserComponent } from './user/user.component';
 import { MultasejurosComponent } from './multasejuros/multasejuros.component';
+import { RegisterComponent } from './register/register.component';
 
 const routes: Routes = [
 
   {
     path:'',
     component: LoginComponent,
+  },
+  {
+    path:'register',
+    component: RegisterComponent
   },
   {
     path:'home',
