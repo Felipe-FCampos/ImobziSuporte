@@ -8,7 +8,8 @@ import { Observable } from 'rxjs';
 export class UserService {
   private userName_: string | null = null;
 
-  private apiUrl = 'http://127.0.0.1:8000/'
+  // private apiUrl = 'http://127.0.0.1:8000/'
+  private apiUrl = 'https://imobzisuporteapi.onrender.com/'
 
   constructor(private http: HttpClient) { }
 
